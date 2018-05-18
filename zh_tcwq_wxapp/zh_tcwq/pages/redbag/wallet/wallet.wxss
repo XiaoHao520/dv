@@ -1,0 +1,23 @@
+/* zh_tcwq/pages/merchant/wallet/wallet.wxss */
+.wallet{
+  width: 100%;
+  overflow-x: hidden;
+}
+.mywallet{
+  background-color: white;
+  margin-top: 15rpx;
+  padding: 20rpx;
+}
+.title{
+  color: #333;
+  font-size: 30rpx;
+}
+.mywallet_info{
+  margin-top: 20rpx;
+}
+
+
+
+
+
+

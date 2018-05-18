@@ -1,0 +1,73 @@
+<view class="banner" wx:if="{{pc.length!=0}}">
+  <view class="banner_list" wx:for="{{pc}}" wx:key="{{item.value}}" bindtap='carinfo' data-id='{{item.id}}'>
+    <view class="mation_title flex-bet" bindtap="shuninfo">
+      <view class="flex-center madizhi">
+        <view class='gobyndsingle {{item.class3}}' style='max-width:150rpx'>{{item.start_place}}</view>
+        <image class="daoda" src="../image/282792329038474488.png"></image>
+        <view class='gobyndsingle {{item.class3}}' style='max-width:150rpx'>{{item.end_place}}</view>
+      </view>
+      <view class="banner_time {{item.class3}}">{{item.time}} 发布</view>
+    </view>
+
+    <view class="flex-bet banner_menu">
+      <view class="flex-center banner_content" bindtap="shuninfo">
+        <image class="timeimg" src="../image/naozhong@2x.png"></image>
+        <view class=' {{item.class3}}'>{{item.start_time1}}日 {{item.start_time2}} {{item.num}}人</view>
+      </view>
+      <view class="flex-center banner_tel {{item.class4}}" bindtap="call_phone" data-tel="{{item.link_tel}}">
+        <image class="banner_telimg" src="../image/baidianhua.png"></image>
+        <view class=' '>电话</view>
+      </view>
+    </view>
+
+    <view class="car {{item.class1}}" wx:if="{{item.is_open==1}}">{{item.typename}}</view>
+    <view class="car {{item.class2}}" wx:if="{{item.is_open==2}}">{{item.typename}}</view>
+    <block wx:if="{{item.is_open==1}}">
+      <view class="beizhu gobyndmulit {{item.class}}" wx:if="{{item.other!=''}}" bindtap="shuninfo">
+        备注：{{item.other}}
+      </view>
+    </block>
+    <block wx:if="{{item.is_open==2}}">
+      <view class="beizhu gobyndmulit color3" wx:if="{{item.other!=''}}" bindtap="shuninfo">
+        备注：{{item.other}}
+      </view>
+    </block>
+  </view>
+</view>
+<view class='none' wx:else>
+  <view>
+    <image class='ab lr' mode='aspectFill' src='../image/tie2.png'></image>
+  </view>
+  <view>暂无入驻的信息</view>
+</view>
+<view class='classfinal' wx:if="{{foot==true}}">
+  <view>顺风车</view>
+  <view wx:for="{{release}}" wx:key="{{item.value}}" bindtap='shunfabu' id="{{item.id}}">{{item.name}}</view>
+  <view bindtap='footbtn'>取消</view>
+</view>
+<view class='nav'>
+  <view bindtap='shouye'>
+    <view class='rel'>
+      <image mode='scaleToFill' src='../image/shouye.png' class='ab lr'></image>
+    </view>
+    <view style='color:#333'>首页</view>
+  </view>
+  <view bindtap='yellow'>
+    <view class='rel'>
+      <image mode='scaleToFill' src='../image/carpooling.png' class='ab lr'></image>
+    </view>
+    <view style='color:#333'>掌上拼车</view>
+  </view>
+  <view bindtap='footbtn'>
+    <view class='rel'>
+      <image mode='scaleToFill' src='../image/zixun.png' class='ab lr'></image>
+    </view>
+    <view style='color:#333'>我要入驻</view>
+  </view>
+  <view bindtap='mine_yellow'>
+    <view class='rel'>
+      <image mode='scaleToFill' src='../image/wode-foucs.png' class='ab lr'></image>
+    </view>
+    <view style='color:#ed414a'>我的拼车</view>
+  </view>
+</view>

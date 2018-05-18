@@ -1,0 +1,59 @@
+<!--zh_tcwq/pages/logs/order.wxml-->
+<view class="order">
+  <!-- 热门模块开始 -->
+  <view class="marry">
+    <view class="weuinavbar">
+      <block wx:for="{{luntext}}" wx:key="*this">
+        <view id="{{index}}" class="navbaritem {{activeIndex == index ? 'itemon' : ''}}" bindtap="tabClick">
+          <view class="itemtext weuinavbartitle">{{item}}</view>
+          <view id="{{index}}" class="zheline {{activeIndex == index ? 'block' : ''}}"></view>
+        </view>
+      </block>
+    </view>
+  </view>
+ <!--  banner  开始  -->
+  <view class="banner">
+    <view style='border-bottom: solid #f0f0f0 0.5px;wxcs_style_border-bottom: solid #f0f0f0 1rpx;'>
+      <view style='display: flex;'>
+        <image src='../../image/fabu.png' style='width: 60px;height: 60px;'>
+        </image>
+        <view style='padding-left:7px'>
+          <view style='font-size:13pt'>小强</view>
+          <view style='background-color: #70CEFC;color: white;padding: 0 10px;border-radius: 15px;'>广州</view>
+        </view>
+      </view>
+      <view style='padding: 10px;'>
+        <view style='font-size: 15pt;font-weight: bold;border-bottom: solid #000 0.5px;wxcs_style_border-bottom: solid #000 1rpx;' bindtap='detail'>
+          世界冠军进入小学偷东西
+        </view>
+        <view>
+          <view  bindtap='detail'>
+            文字文字文字文字文字文字文字文字文字文字 文字文字文字文字文字文字文字文字文字文字
+          </view>
+          <view style='10px'>
+            <image src='../../image/share_.png' style='width: 100%;'>
+            </image>
+          </view>
+        </view>
+      </view>
+      <view>
+         <view style='display: flex;color: #A0A0A0;font-size: 11pt;position:relative'>
+        <view style='display:flex'>
+          <image src='../../image/time.png' style='width: 25px;height: 25px;display: inline-block;vertical-align: middle;'></image>
+          <text style='margin-left:3px'>02-28</text>
+        </view>
+        <view style='display:flex;margin-left:10px'>
+          <image src='../../image/new_comment.png' style='width: 24px;height: 24px;display: inline-block;vertical-align: middle;'></image>
+          <text style='margin-left:3px'>0</text>
+        </view>
+        <view style='display: flex;margin-left: 10px;position: absolute;right: 10px;color: #ED434B;'>
+          <image src='../../image/address3.png' style='width: 24px;height: 24px;display: inline-block;vertical-align: middle;'></image>
+          <text style='margin-left:3px'>100KM</text>
+        </view>
+      </view>
+      </view>
+    </view>
+  </view>
+<!--banner  结束  -->
+  <view class="nomore">无更多信息</view>
+</view>

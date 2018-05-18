@@ -1,0 +1,298 @@
+<view class='comments border_one color2 rel' bindtap='comments2'>
+  <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
+    <button form-type='submit'></button>
+  </form>
+  分享
+</view>
+<view class='comments border_two color3 rel' bindtap='comments1'>
+  <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
+    <button form-type='submit'></button>
+  </form>
+  微信
+</view>
+<view class='comments border_three color1 rel' bindtap='comments'>
+  <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
+    <button form-type='submit'></button>
+  </form>
+  评论
+</view>
+<view class='comments border_four color5' bindtap='comment3'>
+  转发
+  <button open-type="share"></button>
+</view>
+<view class='wechat rel' wx:if="{{wechat==true}}">
+  <view class='ab' bindtap='comments1'></view>
+  <view class='udlr ab'>
+    <view class='baocun'>保存二维码添加微信</view>
+    <image class='ab' bindtap='previewImage' mode='aspectFill' src="{{url}}{{store.weixin_logo}}"></image>
+    <view class='sele'>点击图片预览保存图片</view>
+    <view class='queding'>
+      <text bindtap='comments1'>确定</text>
+    </view>
+  </view>
+  <!-- </canvas> -->
+</view>
+<view class='wechat rel' wx:if="{{share==true}}">
+  <view class='ab' bindtap='comments2'></view>
+  <view class='udlr ab'>
+    <view class='baocun'>分享商家二维码</view>
+    <image class='ab' bindtap='previewImage2' mode='aspectFill' src="{{bath}}"></image>
+    <view class='sele'>点击图片预览保存图片</view>
+    <view class='queding'>
+      <text bindtap='comments2'>确定</text>
+    </view>
+  </view>
+  <!-- </canvas> -->
+</view>
+<view class='publish' wx:if="{{comments==true}}">
+  <view class='user_info'>
+    <view class='rel'>
+      <image class='ab udlr' style='width:80rpx;height:80rpx;' src='{{user_info.img}}'></image>
+    </view>
+    <view>
+      {{user_info.name}}
+    </view>
+    <view></view>
+  </view>
+  <view class='details rel'>
+    <view class='rel stt' wx:if="{{relpay==false}}">
+      <view class='ab udlr star'>
+        <view wx:for="{{star}}">
+          <image bindtap='star' data-index='{{index}}' mode='widthFix' src='{{item.img}}'></image>
+        </view>
+        <text>{{index}} 分</text>
+      </view>
+    </view>
+    <view class='texta'>
+      <textarea maxlength='140' auto-focus="true" fixed="true" bindblur="textarea" placeholder='请输入评论'></textarea>
+    </view>
+    <view class='dibu'>
+      <view class='fl cancel rel'>
+        <form class='plate_form' bindsubmit="formid_three" report-submit="true" bindreset="formReset">
+          <button form-type='submit'>取消</button>
+        </form>
+      </view>
+      <view class='fl ensure rel'>
+        <form class='plate_form' bindsubmit="formid_two" report-submit="true" bindreset="formReset">
+          <button form-type='submit'>确定</button>
+        </form>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="swiper-container" wx:if="{{store.img1!=''}}">
+  <swiper autoplay="true" circular='true' indicator-dots='true' interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" bindtap='Demonstration'>
+    <block wx:for="{{store.img1}}" wx:key="*this">
+      <swiper-item>
+        <image mode="aspectFill" src="{{url}}{{item}}" class="img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="header">
+  <view class="top flex-center rel">
+    <image class="top_tou" src="{{url}}{{store.logo}}"></image>
+    <view class="top_right">
+      <view class="top_title">{{store.store_name}}</view>
+      <view class="top_xing flex-center">
+        <image wx:for="{{star3}}" src="{{item.img}}"></image>
+        <view class="top_xingtext" wx:if="{{score==0}}">5分</view>
+        <view class="top_xingtext" wx:else>{{score}}分</view>
+      </view>
+    </view>
+    <view class='vr_store ab' bindtap='Demonstration' wx:if="{{store.vr_link!=''}}">VR演示</view>
+  </view>
+
+  <view class="top_renqi">
+    <text>分享：{{store.fx_num}}</text>
+    <text>浏览量：{{store.views}}</text>
+  </view>
+
+  <view class="dizhi">
+    <view class="dizhi_top flex-center" bindtap='dizhi'>
+      <image class="dizhi_topimg" src="../image/address.png"></image>
+      <view class="dizhi_toptext gobyndsingle">{{store.address}}</view>
+    </view>
+    <view class="dizhi_time flex-bet">
+      <view class="flex-center">
+        <image src="../image/naozhong@2x.png" class="dizhi_timeimg"></image>
+        <view class="dizhi_font1">{{store.start_time}}-{{store.end_time}}</view>
+      </view>
+      <view class="flex-center" bindtap='phone'>
+        <image class="dizhi_tellimg" src="../image/xiangqingdianhua@2x.png"></image>
+        <view class="dizhi_font2">电话</view>
+      </view>
+    </view>
+  </view>
+  <view class="dynamic_text" style='font-size:24rpx;'>
+    <view wx:if="{{store.skzf==1}}">
+      <view class='rel'>
+        <image class='ab udlr' mode='widthFix' src='../image/shauka.png'></image>
+      </view>
+      <view>刷卡支付</view>
+    </view>
+    <view wx:if="{{store.wifi==1}}">
+      <view class='rel'>
+        <image class='ab udlr' mode='widthFix' src='../image/wifi.png'></image>
+      </view>
+      <view>免费WIFI</view>
+    </view>
+    <view wx:if="{{store.mftc==1}}">
+      <view class='rel'>
+        <image class='ab udlr' mode='widthFix' src='../image/car.png'></image>
+      </view>
+      <view>免费停车</view>
+    </view>
+    <view wx:if="{{store.jzxy==1}}">
+      <view class='rel'>
+        <image class='ab udlr' mode='widthFix' src='../image/smoke.png'></image>
+      </view>
+      <view>禁止吸烟</view>
+    </view>
+    <view wx:if="{{store.tgbj==1}}">
+      <view class='rel'>
+        <image class='ab udlr' mode='widthFix' src='../image/baojian.png'></image>
+      </view>
+      <view>提供包间</view>
+    </view>
+    <view wx:if="{{store.sfxx==1}}">
+      <view class='rel'>
+        <image class='ab udlr' mode='widthFix' src='../image/sahfa.png'></image>
+      </view>
+      <view>沙发休闲</view>
+    </view>
+  </view>
+  <view class="flex2">
+    <view class="set flex-center gobyndsingle" wx:for="{{setlist}}" wx:key="*this">
+      <image class="setimg" src="{{item.img}}"></image>
+      <view class="setext">{{item.text}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='more' bindtap='more' wx:if="{{store_good.length!=0}}">
+  <text>商品</text>
+  <text>查看更多></text>
+</view>
+<view class='commodity'>
+  <view class='child'>
+    <view class='goods rel' wx:for="{{store_good}}" wx:key='{{item.value}}' id='{{item.id}}' bindtap='goods_info' wx:if="{{item.is_show==1}}">
+      <image class='goods_img' mode='aspectFill' src='{{url}}{{item.lb_imgs[0]}}'></image>
+      <view>{{item.goods_name}}</view>
+      <view style='color:#ED414A'>￥{{item.goods_cost}}</view>
+      <view class='ab'>
+        <text>推荐</text>
+      </view>
+      <view class='ab'>
+        <image mode='aspectFill' src='../image/car1.png'></image>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!--字体轮播开始  -->
+<view class="user flex-center">
+  <block wx:for="{{tabs2}}" wx:key="*this">
+    <view id="{{index}}" class="selle {{activeIndex == index ? 'selle_on' : ''}}" bindtap="tabClick">
+      <view>{{item}}</view>
+    </view>
+  </block>
+  <view class="user_slider" style="left:{{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+</view>
+<!--字体轮播结束  -->
+
+<!--商家动态部分开始  -->
+<view class="dynamic" hidden="{{activeIndex != 0}}">
+  <view class="dynamic_box">
+
+    <view class="dynamic_text">
+      {{store.details}}
+    </view>
+    <view class="dynamic_img">
+      <image mode='widthFix' wx:for="{{store.images}}" bindtap='previewImage1' id="{{index}}" src='{{url}}{{item}}'></image>
+      <view class='store_ewm'>
+        <view>点击图中小程序码进行识别,即可进入门店</view>
+        <view class='rel'>
+          <image class='ab udlr' mode='aspectFill' bindtap='previewImage2' wx:if="{{store.ewm_logo==''||store.ewm_logo==null}}" src='{{bath}}'></image>
+          <image class='ab udlr' mode='aspectFill' bindtap='previewImage3' wx:else src='{{url}}{{store.ewm_logo}}'></image>
+        </view>
+        <view>
+          <text>{{store.store_name}}</text> 专属小程序码
+        </view>
+        <view class='rel' bindtap='settled'>
+          <view class='ab udlr'>我是商家,我要入驻</view>
+        </view>
+      </view>
+      <view style='height:100rpx;width:100%;'></view>
+    </view>
+  </view>
+</view>
+<view hidden="{{activeIndex != 1}}">
+  <view class="comment" wx:if="{{comment.length!=0}}">
+    <view class="comment_one" wx:for="{{comment}}">
+      <image class="comment_tou" src="{{item.user_img}}"></image>
+      <view class="comment_banner">
+        <view class="comment_top flex-bet">
+          <view class="">{{item.name}}</view>
+          <view class="flex-center" wx:if="{{user_info.id==store.user_id}}">
+            <image class="comment_hui" src="../image/duihua.png"></image>
+            <view class="comment_huifu" bindtap='reply' data-id='{{item.id}}'>回复</view>
+          </view>
+        </view>
+        <!--星星部分  -->
+        <view class="top_xing2 flex-center">
+          <image wx:for="{{item.star}}" src="{{item.img}}"></image>
+          <view class="top_xingtext">{{item.score}}分</view>
+        </view>
+        <!--评论部分  -->
+        <view class="top_xing2">{{item.details}}</view>
+        <view class="top_xing3 background1" wx:if="{{item.reply!=''}}">
+          <text>商家回复：</text>{{item.reply}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="title" wx:if="{{comment.length==0}}">
+    暂无评论
+  </view>
+</view>
+<view class='footer'>
+  <view bindtap='shouye' class='rel'>
+    <view class='icon rel'>
+      <image mode='widthFix' class='ab udlr' src='../image/index.png'></image>
+    </view>
+    <view class='nav_title center'>首页</view>
+    <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
+      <button form-type='submit'></button>
+    </form>
+  </view>
+  <view bindtap='Collection' class='rel'>
+    <view class='icon rel'>
+      <image wx:if="{{Collection==true}}" mode='widthFix' class='ab udlr' src='../image/Already.png'></image>
+      <image wx:if="{{Collection==false}}" mode='widthFix' class='ab udlr' src='../image/collection.png'></image>
+    </view>
+    <view class='nav_title center'>
+      <text wx:if="{{Collection==true}}">已收藏</text>
+      <text wx:if="{{Collection==false}}">收藏</text>
+    </view>
+    <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
+      <button form-type='submit'></button>
+    </form>
+  </view>
+  <view bindtap='dizhi' class='rel'>
+    <view class='icon rel'>
+      <image mode='widthFix' class='ab udlr' src='../image/nav.png'></image>
+    </view>
+    <view class='nav_title center'>导航</view>
+    <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
+      <button form-type='submit'></button>
+    </form>
+  </view>
+  <view bindtap='phone' class='nav_phone rel'>
+    <view>一键拨号</view>
+    <view>{{store.tel}}</view>
+    <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
+      <button form-type='submit'></button>
+    </form>
+  </view>
+</view>

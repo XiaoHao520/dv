@@ -1,0 +1,134 @@
+<!--logs.wxml-->
+<view class="header">
+
+  <view class="header_box">
+    <view class="header_set">
+      <image bindtap='address' src="../image/set.png"></image>
+    </view>
+    <view class="flex3">
+      <block wx:if="{{avatartUrl!=''}}">
+        <image class="picture" src="{{avatarUrl}}"></image>
+      </block>
+      <block wx:else>
+        <button open-type='getUserInfo'>授权</button>
+      </block>
+      <view class="header_name">{{nickName}}</view>
+    </view>
+  </view>
+</view>
+<!--订单部分开始  -->
+
+
+<view style='display:flex;justify-content:space-between;padding:12px 20px;background-color:white;border-bottom:solid #f0f0f0 1rpx;'>
+  <view style='display:flex'>
+    <image src='../image/jifen.png' style='width: 25px;height: 25px;'></image>
+    <text style='font-size:11pt'>积分：100</text>
+  </view>
+  <view style='display:flex'>
+    <image src='../image/feiyong.png' style='width: 25px;height: 25px;'></image>
+    <text style='font-size:11pt'>爆料费：100</text>
+  </view>
+</view>
+
+<view class="list">
+  <view class="list_content">
+    <view class="list_fukuan flex-bet">
+      <view class="flex3 list_collet" bindtap='payment'>
+        <image class="list_fukuanimg" src="../image/jifen.png"></image>
+        <view class="">我的积分</view>
+      </view>
+      <view class="flex3 list_collet" bindtap='payment_one'>
+        <image class="list_fukuanimg" src="../image/feiyong.png"></image>
+        <view class="">报料费</view>
+      </view>
+      <view class="flex3 list_collet" bindtap='fabu'>
+        <image class="list_fukuanimg2" src="../image/fasong.png" style='width:64rpx'></image>
+        <view class="">我的发布</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--订单部分开始  -->
+
+<!--我的收藏部分开始  -->
+<view class="banner">
+
+  <view class="banner_list flex-bet" bindtap='collection'>
+    <view class="list_all flex-center">
+      <image class="list_allimg" src="../image/wujiao.png"></image>
+      <view class="list_alltext">我的收藏</view>
+    </view>
+    <view class="list_alllist flex-center">
+      <image class="list_right" src="../image/huise@2x.png"></image>
+    </view>
+  </view>
+
+</view>
+<!--我的收藏部分结束  -->
+
+<!--我的收藏部分开始  -->
+<view class="banner">
+  <view class="banner_list flex-bet" bindtap='content'>
+    <view class="list_all flex-center">
+      <image class="list_allimg" src="../image/kefu.png"></image>
+      <view class="list_alltext">联系客服</view>
+    </view>
+    <view class="list_alllist flex-center">
+      <view class="banner_text">有疑问请找我</view>
+      <image class="list_right" src="../image/huise@2x.png"></image>
+    </view>
+  </view>
+  <view class="banner_list flex-bet" bindtap='help'>
+    <view class="list_all flex-center">
+      <image class="list_allimg" src="../image/help.png"></image>
+      <view class="list_alltext">帮助中心</view>
+    </view>
+    <view class="list_alllist flex-center">
+      <view class="banner_text"></view>
+      <image class="list_right" src="../image/huise@2x.png"></image>
+    </view>
+  </view>
+  <view class="banner_list flex-bet" bindtap='about'>
+    <view class="list_all flex-center">
+      <image class="list_allimg" src="../image/about.png"></image>
+      <view class="list_alltext">关于DV现场</view>
+    </view>
+    <view class="list_alllist flex-center">
+      <view class="banner_text"></view>
+      <image class="list_right" src="../image/huise@2x.png"></image>
+    </view>
+  </view>
+  <view class="banner_list flex-bet" bindtap="jizhe">
+    <view class="list_all flex-center">
+      <image class="list_allimg" src="../image/feiji.png"></image>
+      <view class="list_alltext">记者入口</view>
+    </view>
+
+  </view>
+</view>
+
+
+<view style='position: absolute;width: 100%;top: 0;z-index: 999;height: 100%;background: rgba(0 ,0 ,0 ,0.8);' class='{{display}}'>
+  <view class='login-form'>
+    <form bindsubmit="login">
+    <view style='text-align:center;padding-top:10px'> 
+     记者登录
+    </view>
+      <view style="margin-top: 20px;font-size: 11pt;text-align: center;">
+        <input placeholder='请输入账号' name="username" style='width: 70%;height:40px;background-color: #E5E5E5;margin: 0 auto;border-radius: 34px;padding: 0 10px;'>
+        </input>
+      </view>
+      <view style='margin-top: 20px;font-size: 11pt;text-align: center;'>
+        <input placeholder='请输入密码' name="password" type='password' style='width: 70%;height:40px;background-color: #E5E5E5;margin: 0 auto;border-radius: 34px;padding: 0 10px;'>
+        </input>
+      </view>
+      <button form-type='submit' class='login-button'>登录</button>
+    </form>
+  </view>
+</view>
+
+<view class='footer'>
+  <image src='{{url}}{{bq_logo}}'></image>
+  <text>{{support}}</text>
+</view>
+<!--我的收藏部分结束  -->

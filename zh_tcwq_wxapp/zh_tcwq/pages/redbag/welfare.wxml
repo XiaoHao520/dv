@@ -1,0 +1,82 @@
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+  <view class="welfare">
+    <view class="content_miao">福利描述</view>
+    <view class="welheader">
+      <textarea name="details" placeholder="对大家说点什么(不能超出540个字符)" class="headertext" placeholder-style="color:#999;" />
+      <view class="addimg1 rel" wx:for="{{imgArray}}">
+        <image class='ab udlr' mode='aspectFill' src="{{url1}}{{item}}"></image>
+        <view class='ab' bindtap='delete' data-index="{{index}}">
+          <image mode='aspectFill' style='height:100%;width:100%' src='../image/delete.png'></image>
+        </view>
+      </view>
+      <view class="addimg rel" wx:if="{{lunbo_len<9}}" bindtap='choiseimg'>
+        <image class='ab udlr' src="../image/add.png"></image>
+      </view>
+      <!-- <input class="lianjie" type="text" name="website" placeholder="  详情链接网址（没有可不填）" placeholder-style="color:#999;" /> -->
+    </view>
+    <view class='envelope top' wx:if="{{checked1==false}}">
+      <view>
+        <view>
+          <text>红包金额:</text>
+        </view>
+        <view>
+          <input name="money" type='digit' placeholder='福利金额（1至2000元）'></input>
+        </view>
+      </view>
+      <view>
+        <view>
+          <text>红包个数:</text>
+        </view>
+        <view>
+          <input name="share" type='number' placeholder='分成几份（至少1份）'></input>
+        </view>
+      </view>
+    </view>
+    <view class='envelope top' wx:if="{{checked1==true}}">
+      <view>
+        <view>
+          <text>单个金额:</text>
+        </view>
+        <view>
+          <input name="money" type='digit' placeholder='福利金额（0.1至2000元）'></input>
+        </view>
+      </view>
+      <view>
+        <view>
+          <text>红包个数:</text>
+        </view>
+        <view>
+          <input name="share" type='number' placeholder='发几份（至少1份）'></input>
+        </view>
+      </view>
+    </view>
+    <view class='chooose border_top rel'>
+      <view>是否平均分配福利</view>
+      <view class='ab ud'>
+        <switch checked="{{checked_average}}" bindchange="switch1Change" />
+      </view>
+    </view>
+    <view class='chooose  rel'>
+      <view>是否开启口令模式</view>
+      <view class='ab ud'>
+        <switch checked="{{checked_average}}" bindchange="switch2Change" />
+      </view>
+    </view>
+    <view class='envelope' wx:if="{{checked2==true}}">
+      <view>
+        <view>
+          <text>红包口令:</text>
+        </view>
+        <view>
+          <input name="hb_keyword" placeholder='请输入汉字'></input>
+        </view>
+      </view>
+    </view>
+    <view class='procedures'>红包手续费 {{procedures*100}}%</view>
+    <!--—————————底部按钮—————————————  -->
+    <view class="footer">
+      <button class="footerbtn" disabled='{{disabled}}' form-type="submit">撒福利并发布</button>
+    </view>
+    <!--————————————底部按钮——————————  -->
+  </view>
+</form>

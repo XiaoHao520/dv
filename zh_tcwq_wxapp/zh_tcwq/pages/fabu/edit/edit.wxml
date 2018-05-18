@@ -1,0 +1,54 @@
+<!--pages/fabu/edit/edit.wxml-->
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+  <view class="header" hidden='true'>
+    <view class="header_title">发布{{info}}信息</view>
+    <view class="header_right" bindtap='know'>发布须知</view>
+  </view>
+  <view class="content">
+    <view class="content_miao">内容描述</view>
+    <view class="miaoshu_box">
+      <textarea maxlength='540' class="miaoshu" name="content" placeholder="请输入内容描述" />
+    </view>
+  </view>
+
+   <view style="display: flex;">
+      <image src='../../image/pic.png' style='width: 39px;height: 38px;margin: 6px;'></image>
+
+      <image src='../../image/video.png' bindtap='videoRecord' style='width: 50px;height: 50px;margin-left: 15px;'></image>
+   </view>
+
+  <view class='upload'>
+    <view class='content_add rel' wx:for="{{imgArray1}}" wx:key="*this">
+      <view class='delete ab' bindtap='delete' data-inde="{{index}}">
+        <image mode='aspectFill' class='ab' src='../../image/delete.png'></image>
+      </view>
+      <image bindtap='previewImage' data-index='{{index}}' mode='aspectFill' class="add_img" src="{{url1}}{{item}}"></image>
+    </view>
+    <view class='content_add' bindtap='imgArray1'>
+      <image class="add_img" src="../../image/add.png"></image>
+    </view>
+  </view>
+  <view class='label'>
+    <view wx:for="{{label}}" wx:key="*this" class='{{item.click_class}}' bindtap='label' data-inde='{{index}}' data-id='{{item.id}}'>{{item.label_name}}</view>
+  </view>
+  <view class="banner">
+    <view class="banner_list border flex-center">
+      <view class="banner_name">联系人：</view>
+      <input class="banner_text" name="name" value='{{name}}' placeholder-style="color:#999;font-size:28rpx;" />
+    </view>
+    <view class="banner_list2 border  flex-center">
+      <view class="banner_name">联系方式：</view>
+      <input class="banner_text" type='number' name="tel" placeholder="请输入您的联系方式" placeholder-style="color:#999;font-size:28rpx;" />
+    </view>
+    <view class="banner_list3 flex-center" style='border-bottom: solid #EEEEEE 0.5px;wxcs_style_border-bottom: solid #EEEEEE 1rpx;'>
+      <view class="banner_name">具体位置</view>
+      <view class="banner_text" bindtap='add'>{{address}}</view>
+    </view>
+  </view>
+    
+
+     <view style='width: 80%;background-color: #58B4DD;margin: 0 auto;text-align: center;font-size: 13pt;height: 40px;line-height: 40px;color: white;margin-top: 20px;border-radius: 21px;'>
+        确认发布
+     </view>
+</form>
+ 

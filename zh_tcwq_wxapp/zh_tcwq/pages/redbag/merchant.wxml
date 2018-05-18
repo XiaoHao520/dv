@@ -1,0 +1,132 @@
+<!--zh_tcwq/pages/merchant/merchant.wxml-->
+<view class="merchant">
+  <!--头部开始  -->
+  <view class='logs_header'>
+    <view class="headerimgbox rel">
+      <image class="headerimg" src="../image/background2.png"></image>
+      <view class="logs_box">
+        <image class="touxiang" mode='aspectFill' src="{{url}}{{seller.logo}}"></image>
+        <view class="">{{seller.store_name}}</view>
+      </view>
+      <view class='ab' bindtap='tuichu'>退出登录</view>
+      <!-- <view class='ab' bindtap='tuichu'>到期时间:{{seller.dq_time}}</view> -->
+    </view>
+    <!--我的钱包积分部分开始  -->
+    <view class='logs_content'>
+      <view class='content_left' bindtap='activeIndex_one'>
+        <view class='content_left1'>
+          <text class='content_font'>{{order_num}}</text>
+          <text class='content_coll'>个</text>
+        </view>
+        <view class='content_integral'>今日订单</view>
+      </view>
+
+      <view class='content_left'>
+        <view class='content_middle'>
+          <text class='content_font'>{{seller.wallet}}</text>
+          <text class='content_coll'>元</text>
+        </view>
+        <view class='content_integral'>余额</view>
+      </view>
+
+      <view class='content_left'>
+        <view class='content_right'>
+          <text class='content_font'>0</text>
+          <text class='content_coll'>人</text>
+        </view>
+        <view class='content_integral'>我的客户</view>
+      </view>
+    </view>
+    <!--我的钱包积分部分结束  -->
+    <!--我的订单部分  -->
+    <view class="myorder">我的订单</view>
+    <view class="flex-bet myorderbox">
+      <view class="flex3 myorderimg" bindtap='activeIndex_one'>
+        <image src="../image/huowu.png"></image>
+        <view>待发货</view>
+      </view>
+      <view class="flex3 myorderimg" bindtap='activeIndex_two'>
+        <image src="../image/collet.png"></image>
+        <view>待付款</view>
+      </view>
+      <view class="flex3 myorderimg" bindtap='activeIndex_three'>
+        <image src="../image/ping.png"></image>
+        <view>已完成</view>
+      </view>
+      <view class="flex3 myorderimg" bindtap='activeIndex_four'>
+        <image src="../image/jinqian@3x.png"></image>
+        <view>售后-退款</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="myyue">
+    <view class="flex-bet myyuelist">
+      <view>我的余额</view>
+      <view class="flex-center">
+        <view>余额明细</view>
+        <image class="myyueright" src="../image/huise@2x.png"></image>
+      </view>
+    </view>
+
+    <view class="cash flex-bet">
+      <view class="cashbox">
+        <view class="">今日收益</view>
+        <view class="">{{toady_profit}}</view>
+      </view>
+      <view class="cashbox">
+        <view class="">昨日收益</view>
+        <view class="">{{yes_profit}}</view>
+      </view>
+      <view class="cashbox">
+        <view class="">总收益</view>
+        <view class="">{{profit}}</view>
+      </view>
+      <view class="cashbox">
+        <view>可提现</view>
+        <view>{{profit}}</view>
+      </view>
+      <view class="cashbox" bindtap='cash'>
+        <view class="cashred" style="color:white;">提现</view>
+      </view>
+    </view>
+  </view>
+  <!--头部结束  -->
+
+
+
+  <view class="section">
+    <view class="sec_title">营销工具</view>
+    <view class="flex2 secbox">
+      <view class="seclist" bindtap='welfare'>
+        <image class="secimg" src="../image/welfare.png"></image>
+        <view class="sectext">发福利</view>
+      </view>
+      <view class="seclist" bindtap='sent'>
+        <image class="secimg" src="../image/mine.png"></image>
+        <view class="sectext">我发的福利</view>
+      </view>
+      <view class="seclist" bindtap='fuck'>
+        <image class="secimg" src="../image/upload.png"></image>
+        <view class="sectext">发布商品</view>
+      </view>
+      <view class="seclist" bindtap='mine_shop'>
+        <image class="secimg" src="../image/mine_shop.png"></image>
+        <view class="sectext">我的商品</view>
+      </view>
+      <view class="seclist" bindtap='more'>
+        <image class="secimg" src="../image/mine_bussiness.png"></image>
+        <view class="sectext">我的店铺</view>
+      </view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="sec_title">店铺设置</view>
+    <view class="flex2 secbox" bindtap='mechat'>
+      <view class="seclist">
+        <image class="secimg" mode='aspectFill' src="../image/edit.png"></image>
+        <view class="sectext">修改资料</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--zh_tcwq/pages/merchant/wallet/wallet.wxml-->
+<view class="wallet">
+  <view class="mywallet">
+    <view class="title">我的余额</view>
+    <view class="flex-bet mywallet_info">
+      <image src=""></image>
+    </view>
+
+  </view>
+
+
+
+
+
+
+</view>

@@ -1,0 +1,148 @@
+.container{
+  width: 100%;
+  height: 100%;
+}
+.container>view{
+  width: 100%;
+  height: auto;
+}
+.search_jilu{
+  width: 100%;
+  height: auto;
+  /* background: #fff; */
+  max-height: 76px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.search_jilu>view:nth-child(1){
+  color: #666;
+  line-height: 60rpx;
+  height: 60rpx;
+  width: 100%;
+  text-indent: 20rpx;
+  font-size: 26rpx;
+}
+.search_jilu>view:nth-child(2){
+  width: 95%;
+  height: auto;
+  margin: 0 auto 0;
+   background: #fff; 
+  padding-bottom: 10rpx;
+}
+.search_jilu>view text{
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+}
+/* .container>view view{
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+  line-height: 40rpx;
+} */
+.city_name{
+  font-size: 28rpx;
+  /* text-indent: 40rpx; */
+  height: 50rpx;
+  /* background: red; */
+  display: inline-block;
+  width: 33.3%;
+  text-align: center;
+  padding: 20rpx 0;
+
+  line-height: 50rpx;
+}
+.itemon{
+  border-bottom:2rpx solid #ED414A;
+  color: #ED414A;
+  font-size: 40rpx;
+}
+.city_name text{
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  display: inline-block;
+  border-radius: 10rpx;
+}
+.city_title{
+  font-size: 32rpx;
+  text-indent: 20rpx;
+  height: 60rpx;
+  /* background: #fff; */
+  line-height: 60rpx;
+}
+.city_title text{
+  /* padding: 10rpx 20rpx;
+  border-radius: 5rpx;
+  background: #fff; */
+}
+.scroll1{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width:20%;
+  height: 100%;
+  background: #fff;
+}
+.search{
+  width: 100%;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+.scroll1 view{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+.none{
+  border-bottom: 1rpx solid #f7f7f7;
+  font-size: 30rpx;
+}
+.scroll2{
+  width: 80%;
+  background: #f7f7f7;
+  position: fixed;
+  right: 0;
+}
+.search>view{
+  width: 95%;
+  height: 60%;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.search>view input{
+  width: 82%;
+  height: 100%;
+  font-size: 24rpx;
+  margin-left: 2%;
+  /* text-indent: 20rpx; */
+}
+.search>view view{
+  width: 16%;
+  height: 100%;
+  background: #ED414A;
+  border-top-right-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  right: 0;
+  top: 0;
+}
+.search>view view icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.search_result{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background: #fff;
+  z-index: 50000;
+  overflow: scroll;
+}
+.search_result>view{
+  width: 95%;
+  height: 80rpx;
+  margin: 0 auto 0;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+}

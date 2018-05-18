@@ -1,0 +1,32 @@
+<view class="container">
+  <view class='search rel' style='height:70px;'>
+    <view class='ab udlr'>
+      <input style='line-height:42px;' placeholder='请输入城市名字' bindinput="search"></input>
+      <view class='ab'>
+        <icon class='ab udlr' type="search" size="25" color='#f7f7f7' />
+      </view>
+    </view>
+  </view>
+  <view class='search_result' style='height:{{windowHeight}}px;top:70px' wx:if="{{result.length!=0}}">
+    <view wx:for="{{result}}"  bindtap='select_citys' data-city='{{item}}'>{{item}}</view>
+  </view>
+  <view class='search_jilu' wx:if="{{search_ji.length!=0}}">
+      <view>搜索记录</view>
+      <view>
+          <text wx:for="{{search_ji}}"  bindtap='select_city' data-city='{{item.cityname}}'>{{item.cityname}}</text>
+      </view>
+  </view>
+   <scroll-view class='scroll1' scroll-y="true" style='height:{{windowHeight}}px;top:{{search_top}}px;'>
+    <view class="{{activeIndex == index ? 'itemon' : 'none'}}" wx:for="{{citys}}" wx:key="*this" bindtap="selectMenu" data-item-index="{{index}}">{{item[0].name}}</view>
+  </scroll-view>
+  <scroll-view class='scroll2' scroll-y="true" scroll-into-view="{{toView}}" style='height:{{windowHeight}}px;top:{{search_top}}px;'>
+    <view wx:for="{{citys}}" bindtap="selectMenu" wx:key="*this" wx:for-index="parentIndex">
+      <view id="{{parentIndex}}" class='city_title'>
+        <text>{{item[0].name}}</text>
+      </view>
+      <view class='city_name' wx:for="{{item[0].city}}" wx:key="*this" bindtap='select_city' data-city='{{item.name}}'>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view> 
+</view>

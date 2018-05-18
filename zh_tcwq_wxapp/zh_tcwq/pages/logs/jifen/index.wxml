@@ -1,0 +1,69 @@
+<!--zh_tcwq/pages/logs/jifen/index.wxml-->
+<text>zh_tcwq/pages/logs/jifen/index.wxml</text>
+<!--zh_tcwq/pages/logs/fee/index.wxml-->
+<!--logs.wxml-->
+<view class="header">
+
+  <view class="header_box">
+    <view class="header_set">
+      <image bindtap='address' src="../image/set.png"></image>
+    </view>
+    <view class="flex3">
+      <block wx:if="{{avatartUrl!=''}}">
+        <image class="picture" src="{{avatarUrl}}"></image>
+      </block>
+      <block wx:else>
+        <button open-type='getUserInfo'>授权</button>
+      </block>
+      <view class="header_name">{{nickName}}</view>
+    </view>
+  </view>
+</view>
+<!--订单部分开始  -->
+
+
+<view style='display:flex;justify-content:space-between;padding:12px 20px;background-color:white;border-bottom:solid #f0f0f0 1rpx;'>
+  <view style='display:flex'>
+    <image src='../../image/feiyong.png' style='width: 25px;height: 25px;'></image>
+ <text style='font-size:11pt;margin-left:10px'>我的报料费   </text> <text style='font-size:11pt;color:#E56C6A;margin-left:10px'>100</text>
+  </view>
+  <view style='background-color: #E56C6A;color: white;border-radius: 42rpx;padding: 0 20px;'>
+    提现
+  </view>
+</view>
+
+
+<!--我的收藏部分开始  -->
+
+<view style='width: 96%;margin: 0 auto;box-shadow: 0px 10px 20px 0px #BABABA;'>
+  <view class="banner">
+    <view class="banner_list flex-bet" bindtap='collection'>
+      <view class="list_all flex-center">
+        <view class="list_alltext" style='font-weight: bold;font-size: 13pt;'>排行榜</view>
+      </view>
+    </view>
+  </view>
+  <!--我的收藏部分结束  -->
+
+  <!--我的收藏部分开始  -->
+  <view class="banner">
+    <view class="banner_list flex-bet" bindtap='content'>
+      <view class="list_all flex-center">
+        <image src="../../image/kefu.png" style='width: 83rpx;height: 83rpx;'></image>
+        <image src="../../image/kefu.png" style='width: 83rpx;height: 83rpx;margin-left: 20px;'></image>
+        <view style='margin-left: 20px;font-size: 13pt;font-weight: 500;color: #707070;'>you are my zing</view>
+      </view>
+      <view class="list_alllist flex-center">
+        <view class="banner_text" style='color:#E19700'>1000</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class='footer'>
+  <image src='{{url}}{{bq_logo}}'></image>
+  <text>{{support}}</text>
+</view>
+<!--我的收藏部分结束  -->

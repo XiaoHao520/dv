@@ -1,0 +1,155 @@
+// zh_tcwq/pages/redbag/mine_order_info.js
+var app = getApp()
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that = this
+    var id = options.id
+    that.setData({
+      id: id
+    })
+    that.refresh()
+  },
+  refresh: function (e) {
+    var that = this
+    var id = that.data.id
+    app.util.request({
+      'url': 'entry/wxapp/StoreOrderInfo',
+      'cachetime': '0',
+      data: { order_id: id },
+      success: function (res) {
+        console.log(res)
+        res.data.time = app.ormatDate(res.data.time)
+        console.log(res.data.address.length)
+        if (res.data.address.length>22){
+          that.setData({
+            height:40
+          })
+        }
+        that.setData({
+          oreder_info: res.data
+        })
+      },
+    })
+  },
+  // ------------------------------确认收货--------------------------
+  Deliver: function (e) {
+    var that = this
+    var id = that.data.id
+    app.util.request({
+      'url': 'entry/wxapp/DeliveryOrder',
+      'cachetime': '0',
+      data: { order_id: id },
+      success: function (res) {
+        console.log(res)
+        wx:wx.showToast({
+          title: '操作成功',
+          icon: '',
+          image: '',
+          duration: 2000,
+          mask: true,
+          success: function(res) {
+            setTimeout(function(){
+              that.refresh()
+            },2000)
+          },
+          fail: function(res) {},
+          complete: function(res) {},
+        })
+      },
+    })
+  },
+  // -----------------------------确认收货----------------------------
+  complete: function (e) {
+    var that = this
+    console.log(e)
+    var id = that.data.id
+    app.util.request({
+      'url': 'entry/wxapp/CompleteOrder',
+      'cachetime': '0',
+      data: { order_id: id },
+      success: function (res) {
+        console.log(res)
+        wx: wx.showToast({
+          title: '操作成功',
+          icon: '',
+          image: '',
+          duration: 2000,
+          mask: true,
+          success: function (res) {
+            setTimeout(function () {
+              that.refresh()
+            }, 2000)
+          },
+          fail: function (res) { },
+          complete: function (res) { },
+        })
+      },
+    })
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: wx.getStorageSync('color'),
+      animation: {
+        duration: 0,
+        timingFunc: 'easeIn'
+      }
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})
