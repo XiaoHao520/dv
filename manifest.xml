@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns="http://www.we7.cc" versionCode="">
+
+	<application setting="false">
+
+		<name><![CDATA[志汇-同城微圈小程序]]></name>
+
+		<identifie><![CDATA[zh_tcwq]]></identifie>
+
+		<version><![CDATA[6.2]]></version>
+
+		<type><![CDATA[services]]></type>
+
+		<ability><![CDATA[志汇-同城微圈小程序]]></ability>
+
+		<description><![CDATA[志汇-同城微圈小程序]]></description>
+
+		<author><![CDATA[淘宝大众乐科技]]></author>
+
+		<url><![CDATA[https://shop504817250.taobao.com]]></url>
+
+	</application>
+
+	<platform>
+
+		<subscribes>
+
+		</subscribes>
+
+		<handles>
+
+		</handles>
+
+		<rule embed="false" />
+
+		<card embed="false" />
+
+		<supports>
+
+			<item type="wxapp" />
+
+		</supports>
+
+	</platform>
+
+	<bindings>
+
+		<page>
+
+			<entry title="首页" do="/zh_tcwq/pages/index/index" state="" direct="" />
+
+		</page>
+
+	</bindings>
+
+	<permissions>
+
+	</permissions>
+
+	<install><![CDATA[insert.php]]></install>
+
+	<uninstall><![CDATA[]]></uninstall>
+
+	<upgrade><![CDATA[update.php]]></upgrade>
+
+</manifest>

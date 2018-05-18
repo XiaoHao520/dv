@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="aa3b0575-faa1-40d8-8d84-7a53c856471a" name="dv" url="http://118.89.27.146">
+        <fileTransfer host="118.89.27.146" port="21" rootFolder="/addons/zh_tcwq">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
