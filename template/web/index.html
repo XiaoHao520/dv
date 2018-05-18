@@ -133,7 +133,7 @@
         <div class="panel-heading">数据概况信息</div>
             <div class="panel-body">        
             <ul class="col-md-12 yg9_content" style="margin-bottom: 10px;">
-                <li class="col-md-3">
+                <li class="col-md-4" hidden>
                     <div class="col-md-12">
                         <div class="col-md-6">
                             <img class="backimg" src="../addons/zh_tcwq/template/images/xinxi1.png">
@@ -144,29 +144,29 @@
                         </div>
                     </div>
                 </li>
-                <li class="col-md-3">
+                <li class="col-md-6">
                     <div class="col-md-12">
                         <div class="col-md-6">
                             <img class="backimg" src="../addons/zh_tcwq/template/images/xinxi2.png">
                         </div>
                         <div class="col-md-6">
                             <p class="tmoney">{$jrtz}</p>
-                            <p class="today">今日新增帖子</p>
+                            <p class="today">今日新增爆料</p>
                         </div>
                     </div>
                 </li>
-                <li class="col-md-3">
+                <li class="col-md-6" >
                     <div class="col-md-12">
                         <div class="col-md-6">
                             <img class="backimg" src="../addons/zh_tcwq/template/images/xinxi3.png">
                         </div>
                         <div class="col-md-6">
-                            <p class="tmoney">{$jrsh}</p>
-                            <p class="today">今日新增商户</p>
+                            <p class="tmoney">爆料总数</p>
+                            <p class="today">{$tztotal['count']}</p>
                         </div>
                     </div>
                 </li>
-                <li class="col-md-3">
+                <li class="col-md-3" hidden>
                     <div class="col-md-12">
                     <div class="col-md-6">
                             <img class="backimg" src="../addons/zh_tcwq/template/images/xinxi4.png">
@@ -183,7 +183,7 @@
  </div>
  <div class="main" style="height: 270px;">
     <div class="col-md-12 vipbanner">
-        <div class="col-md-6 vipbig1">
+        <div class="col-md-12 vipbig1">
             <div class="col-md-12 vipbox">
                 <div class="col-md-12 vipcontent">
                     <div class="vipleft">
@@ -212,7 +212,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-6 vipbig2">
+        <div class="col-md-6 vipbig2" hidden>
             <div class="col-md-12 vipbox">
                 <div class="col-md-12 vipcontent">
                     <div class="vipleft">
@@ -245,30 +245,30 @@
         </div>
     </div>
 </div>
-<div class="main">
+<div class="main" hidden>
     <ul class="botul">
         <li>
             <div class="boxcon">
                 <img src="../addons/zh_tcwq/template/images/7.png">
-                <p class="bfont1">帖子数量</p>
+                <p class="bfont1">爆料数量</p>
                 <p class="bfont2">{$tztotal['count']}</p>
             </div>
         </li>
-        <li>
+        <li hidden>
             <div class="boxcon">
                 <img src="../addons/zh_tcwq/template/images/8.png">
                 <p class="bfont1">商户数量</p>
                 <p class="bfont2">{$shtotal['count']}</p>
             </div>
         </li>
-        <li>
+        <li hidden>
             <div class="boxcon">
                 <img src="../addons/zh_tcwq/template/images/9.png">
                 <p class="bfont1">拼车数量</p>
                 <p class="bfont2">{$pctotal['count']}</p>
             </div>
         </li>
-        <li>
+        <li hidden>
             <div class="boxcon">
                 <img src="../addons/zh_tcwq/template/images/10.png">
                 <p class="bfont1">黄页114数量</p>
@@ -282,14 +282,14 @@
                 <p class="bfont2">{$zxtotal['count']}</p>
             </div>
         </li>
-        <li>
+        <li hidden>
             <div class="boxcon">
                 <img src="../addons/zh_tcwq/template/images/12.png">
                 <p class="bfont1">待续...</p>
                 <p class="bfont2">0</p>
             </div>
         </li>
-        <li>
+        <li hidden>
             <div class="boxcon">
                 <img src="../addons/zh_tcwq/template/images/13.png">
                 <p class="bfont1">待续...</p>

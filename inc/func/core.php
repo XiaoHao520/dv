@@ -39,15 +39,14 @@ class Core extends WeModuleSite
                 )
             );*/
               $navemenu[1] = array(
-                'title' => '<a href="index.php?c=site&a=entry&op=display&do=information&m=zh_tcwq" class="panel-title wytitle" id="yframe-1"><icon style="color:#8d8d8d;" class="fa fa-comment-o"></icon>  帖子管理</a>',
+                'title' => '<a href="index.php?c=site&a=entry&op=display&do=information&m=zh_tcwq" class="panel-title wytitle" id="yframe-1"><icon style="color:#8d8d8d;" class="fa fa-comment-o"></icon>  爆料管理</a>',
                 'items' => array(
-                     0 => $this->createMainMenu('帖子列表 ', $do, 'information', ''),
-                     1=> $this->createMainMenu('分类列表', $do, 'fenlei', ''),
-                     2 => $this->createMainMenu('添加帖子', $do, 'addinformation', ''),
+                     0 => $this->createMainMenu('爆料列表 ', $do, 'information', ''),
+                   /*  2 => $this->createMainMenu('添加爆料', $do, 'addinformation', ''),*/
                      3 => $this->createMainMenu('置顶设置', $do, 'top', ''),
                      // 3 => $this->createMainMenu('信息分类 ', $do, 'type', ''),
                      // 4 => $this->createMainMenu('二级信息分类 ', $do, 'type2', ''),
-                     4=> $this->createMainMenu('帖子设置', $do, 'tzcheck', ''),
+                     4=> $this->createMainMenu('爆料设置', $do, 'tzcheck', ''),
                      5=> $this->createMainMenu('评论管理', $do, 'tzpinglun', '')
                 )
             );
@@ -68,7 +67,7 @@ class Core extends WeModuleSite
             );
 
   
-         
+      /*
               $navemenu[7] = array(
                 'title' => '<a href="index.php?c=site&a=entry&op=display&do=goods&m=zh_tcwq" class="panel-title wytitle" id="yframe-7"><icon style="color:#8d8d8d;" class="fa fa-cart-plus"></icon>  商品管理</a>',
                 'items' => array(
@@ -77,7 +76,7 @@ class Core extends WeModuleSite
                      3=> $this->createMainMenu('审核设置', $do, 'goodscheck', ''),
                      4=> $this->createMainMenu('订单管理 ', $do, 'ddgl', ''),
                 )
-            );
+            );*/
        
 
         /*  $navemenu[10] = array(
@@ -98,12 +97,12 @@ class Core extends WeModuleSite
           //            2 => $this->createMainMenu('须知设置', $do, 'instructions', ''),
           //       )
           //   );
-          $navemenu[9] = array(
+      /*    $navemenu[9] = array(
                 'title' => '<a href="index.php?c=site&a=entry&op=display&do=ygquan&m=zh_tcwq" class="panel-title wytitle" id="yframe-9"><icon style="color:#8d8d8d;" class="fa fa-gift"></icon>  营销设置</a>',
                 'items' => array(
                      0 => $this->createMainMenu('营销插件 ', $do, 'ygquan', ''),
                 )
-            );
+            );*/
           /*  $navemenu[2] = array(
                 'title' => '<icon style="color:#8d8d8d;" class="fa fa-cog"></icon>  分销管理',
                 'items' => array(
@@ -126,7 +125,7 @@ class Core extends WeModuleSite
                      0 => $this->createMainMenu('会员列表 ', $do, 'user2', ''),
                 )
             );
-               if($type['many_city']==2){
+ /*              if($type['many_city']==2){
             $navemenu[15] = array(
                 'title' => '<a href="index.php?c=site&a=entry&op=display&do=account&m=zh_tcwq" class="panel-title wytitle" id="yframe-15"><icon style="color:#8d8d8d;" class="fa fa-graduation-cap"></icon>多城市管理</a>',
                 'items' => array(
@@ -136,7 +135,7 @@ class Core extends WeModuleSite
                     3 => $this->createMainMenu('代理佣金比例设置', $do, 'commission', '')
                 )
             );
-        }
+        }*/
            
             
             

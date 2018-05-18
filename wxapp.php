@@ -103,6 +103,8 @@ class Zh_tcwqModuleWxapp extends WeModuleWxapp {
         $data['address'] = $_GPC['address']; //帖子地址
         $data['store_id'] = $_GPC['store_id'];
         $data['cityname'] = $_GPC['cityname'];
+        $data['video']=$_GPC['video'];
+
         if ($_GPC['type']) {
             $data['top'] = 1;
         } else {
@@ -419,7 +421,7 @@ class Zh_tcwqModuleWxapp extends WeModuleWxapp {
         }
         $pageindex = max(1, intval($_GPC['page']));
         $pagesize = 10;
-        $sql = "select a.*,b.img as user_img,c.type_name,d.name as type2_name  from" . tablename("zhtc_information") . " a" . " left join " . tablename("zhtc_user") . " b on b.id=a.user_id " . " left join " . tablename("zhtc_type") . " c on a.type_id=c.id " . " left join " . tablename("zhtc_type2") . " d on a.type2_id=d.id " . $where . " ORDER BY a.top asc,a.id DESC";
+        $sql = "select a.*,b.img as user_img,c.type_name,d.name as type2_name  from" . tablename("zhtc_information") . " a" . " left join " . tablename("zhtc_user") . " b on b.id=a.user_id " . " left join " . tablename("zhtc_type") . " c on a.type_id=c.id " . " left join " . tablename("zhtc_type2") . " d on a.type2_id=d.id " . $where . " ORDER BY a.top desc,a.id DESC";
         $select_sql = $sql . " LIMIT " . ($pageindex - 1) * $pagesize . "," . $pagesize;
         $res = pdo_fetchall($select_sql, $data);
         $sql2 = "select a.*,b.label_name from " . tablename("zhtc_mylabel") . " a" . " left join " . tablename("zhtc_label") . " b on b.id=a.label_id";
@@ -2124,9 +2126,19 @@ class Zh_tcwqModuleWxapp extends WeModuleWxapp {
             echo json_encode($res2);
         }
     }
+
+
+
+
+
+
+
+
+
+
     //上传图片
     public function doPageUpload() {
-        $uptypes = array('image/jpg', 'image/jpeg', 'image/png', 'image/pjpeg', 'image/gif', 'image/bmp', 'image/x-png');
+        $uptypes = array('image/jpg', 'image/jpeg', 'image/png', 'image/pjpeg', 'image/gif', 'image/bmp', 'image/x-png','video/mp4');
         $max_file_size = 2000000; //上传文件大小限制, 单位BYTE
         $destination_folder = "../attachment/"; //上传文件路径
         $watermark = 2; //是否附加水印(1为加水印,其他为不加水印);
@@ -2234,17 +2246,26 @@ class Zh_tcwqModuleWxapp extends WeModuleWxapp {
             imagedestroy($nimage);
             imagedestroy($simage);
         }
-        // if($imgpreview==1)
-        // {
-        // echo "<br>图片预览:<br>";
-        // echo "<img src=\"".$destination."\" width=".($image_size[0]*$imgpreviewsize)." height=".($image_size[1]*$imgpreviewsize);
-        // echo " alt=\"图片预览:\r文件名:".$destination."\r上传时间:\">";
-        // }
+
         echo $fname;
         @require_once (IA_ROOT . '/framework/function/file.func.php');
         @$filename = $fname;
         @file_remote_upload($filename);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /////////////////////////////////////////
     //提现金额模板消息
     public function doPageTxMessage() {

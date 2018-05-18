@@ -76,17 +76,24 @@
 
 
   <!-- 精选新闻 -->
+<block wx:if="{{tz_list.length!=0}}" wx:for="{{tz_list}}" wx:for-item="tz">
 
+  <block wx:if="{{tz.tz.top==1}}">
   <view style='background-color: white;border-bottom: solid #B6B6B6 0.5px;wxcs_style_border-bottom: solid #B6B6B6 1rpx;'>
     <view class='jingxuan'>
       <view class='title'>
-        世界观冠军~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            {{tz.tz.title}}
       </view>
       <view class='jingxuan content-text'>
-        接下来嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd嘻嘻嘻嘻嘻嘻嘻嘻嘻
+       {{tz.tz.details}}
       </view>
       <view>
-        <image src='../image/partner.jpg' style='width:100%'></image>
+       <block wx:if="{{tz.tz.video!=''}}">
+       <video src='{{url}}{{tz.tz.video}}' style='width:100%'></video>
+        </block>
+        <block wx:else>
+         <image src='../image/partner.jpg' style='width:100%'></image>
+        </block>
       </view>
 
       <view style='display: flex;color: #A0A0A0;font-size: 11pt;position:relative'>
@@ -105,14 +112,19 @@
       </view>
     </view>
   </view>
+
+
+ </block>
+<block wx:else>
+
   <!--精选新闻结束  -->
   <view class='newest'>
     <view style='display:flex'>
       <view style='width: 50%;font-weight: 600;'>
-        普金豪华座驾太炫酷美媒不甘：特朗波普也要换新车
+       {{tz.tz.title}}
       </view>
       <view style='width:50%'>
-        <image src='../image/partner.jpg' style='height: 145px;width: 100%;'></image>
+        <image src='{{url}}{{tz.tz.img}}' style='height: 145px;width: 100%;'></image>
       </view>
     </view>
     <view style='display: flex;color: #A0A0A0;font-size: 11pt;position:relative'>
@@ -130,6 +142,8 @@
       </view>
     </view>
   </view>
+  </block>
+</block>
 
 
 
@@ -140,8 +154,7 @@
 
 
 
-
-  <view class="content" wx:if="{{seller.length!=0}}" wx:for="{{seller}}" wx:key="{{item.value}}">
+  <view class="content" wx:if="{{seller.length!=0}}" wx:for="{{seller}}" wx:key="{{item.value}}" hidden='true'>
 
     <view class="content_top">
       <view class="content_left">

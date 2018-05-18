@@ -82,14 +82,11 @@
                           
                        <td class="col-md-1">所属城市</td>
                           <td class="col-md-1">发布时间</td>
-                        <td class="col-md-1">发布人</td>
-                        <td class="col-md-1">发布人电话</td>
-                         <td class="col-md-2">帖子简介</td>
-                      <!--   <td class="col-md-1">是否热门</td> -->
-                        <td class="col-md-1">是否置顶</td>
-                       
-                         <td class="col-md-1">置顶期限</td>
-                          <td class="store_td1 col-md-1">帖子id</td>
+                        <td class="col-md-1">报料人</td>
+                        <td class="col-md-1">报料人电话</td>
+                         <td class="col-md-2">内容简介</td>
+                        <td class="col-md-1">是否精选</td>
+                          <td class="store_td1 col-md-1">报料id</td>
                         <td class="col-md-1">状态</td>
                         <td class="col-md-2">操作</td>
                     </tr>
@@ -108,8 +105,7 @@
                         <span class="label storegrey">否</span>
                         {/if}</td>
                      
-                          <td>{if $item['top_type']==1}一天{elseif $item['top_type']==2}一周{elseif $item['top_type']==3}一个月{/if}</td>
-                            <td>{$item['id']}</td>
+                       <td>{$item['id']}</td>
                           
                         {if $item['state']==1}
                         <td>
@@ -123,7 +119,7 @@
                         <td>
                            <span class="label storegrey">已拒绝</span>
                        </td>
-                       {/if} 
+                       {/if}
                        <td>
                           {if $item['state']==1}
                            <a href="{php echo $this->createWebUrl('information',array('op'=>'tg','id'=>$item['id'],'page'=>$_GPC['page']));}"><button class="btn ygyouhui2 btn-xs">通过</button></a>

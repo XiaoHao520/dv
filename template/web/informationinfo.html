@@ -31,7 +31,7 @@
 <ul class="nav nav-tabs">    
     <span class="ygxian"></span>
     <div class="ygdangq">当前位置:</div>
-    <li class="active"><a href="javascript:void(0);">帖子信息</a></li>
+    <li class="active"><a href="javascript:void(0);">爆料信息</a></li>
 
 </ul>
 
@@ -45,14 +45,22 @@
 
             <div class="panel-heading wyheader">
 
-                帖子信息
+             爆料信息
 
             </div>
 
             <div class="panel-body">
 
                 <div class="form-group">
-                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">联系人</label>
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">请管理员添加标题</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="title" class="form-control" value="{$info['title']}" />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">报料人</label>
                     <div class="col-sm-9">
                         <input type="text" name="user_name" class="form-control" value="{$info['user_name']}" />
                     </div>
@@ -65,13 +73,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">帖子地址</label>
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">爆料地址</label>
                     <div class="col-sm-9">
                         <input type="text" name="address" class="form-control" value="{$info['address']}" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">帖子详情</label>
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">报料详情</label>
                     <div class="col-sm-9">
                        <textarea name="details" class="form-control" cols="30" rows="7">{$info['details']}</textarea>
                     </div>
@@ -79,36 +87,57 @@
 
 
                 <div class="form-group">
-                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">帖子图片</label>
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">报料图片</label>
                     <div class="col-sm-9">
                        {php echo tpl_form_field_multi_image('img',$img);}
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">报料视频</label>
+                    <div class="col-sm-9">
+                        {php echo tpl_form_field_video('video',$video);}
+                    </div>
+
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
+                    <div class="col-sm-9">
+
+                        {if $info['video']!=''}
+                        <div >
+                            <video src="http://{php echo $_SERVER['HTTP_HOST']}/attachment/{$info['video']}" controls="controls"></video>
+                        </div >
+                        {/if}
+                    </div>
+
+                </div>
 
                 
 
-              <div class="form-group">
-                    <label for="lastname" class="col-sm-2 control-label">是否热门</label>
+              <div class="form-group" hidden>
+                    <label for="lastname" class="col-sm-2 control-label">是否精选</label>
                     <div class="col-sm-10">
                          <label class="radio-inline">
                             <input type="radio" id="emailwy1" name="hot" value="1" {if $info['hot']==1 || empty($info['hot'])}checked{/if} />
                             <label for="emailwy1">是</label>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" id="emailwy2" name="hot" value="2" {if $info['hot']==2}checked{/if} />
+                            <input type="radio" id="emailwy2" name="hot" value="0" {if $info['hot']==2}checked{/if} />
                             <label for="emailwy2">否</label>
                         </label>
                     </div>
                 </div>
             <div class="form-group">
-                    <label for="lastname" class="col-sm-2 control-label">是否置顶</label>
+                    <label for="lastname" class="col-sm-2 control-label">是否精选</label>
                     <div class="col-sm-10">
                          <label class="radio-inline">
                             <input type="radio" id="emailwy3" name="top" value="1" {if $info['top']==1 || empty($info['top'])}checked{/if} />
                             <label for="emailwy3">是</label>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" id="emailwy4" name="top" value="2" {if $info['top']==2}checked{/if} />
+                            <input type="radio" id="emailwy4" name="top" value="0" {if $info['top']==2}checked{/if} />
                             <label for="emailwy4">否</label>
                         </label>
                     </div>
@@ -131,38 +160,7 @@
                     <input type="text"  value="{php echo date('Y-m-d H:i:s',$info['time'])}" class="form-control" id="inputEmail3" readonly>
                 </div>
             </div>
-            <!-- <div class="form-group">
-                <label class="col-xs-12 col-sm-3 col-md-2 control-label">栏目分类</label>
-                <div class="col-sm-10">
-                    <input type="text"  value="{$type['type_name']}" class="form-control" id="inputEmail3" readonly>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-xs-12 col-sm-3 col-md-2 control-label">二级栏目分类</label>
-                <div class="col-sm-10">
-                    <input type="text"  value="{$type2['name']}" class="form-control" id="inputEmail3" readonly>
-                </div>
-            </div> -->
-            <div class="form-group">
-                <label class="col-xs-12 col-sm-3 col-md-2 control-label" style="margin-right: 15px;">栏目分类</label>
-                <select class="col-sm-8" name="type_id" id="onefenlei">
-                    {loop $type $key $item}
-                     {if $item['id']==$info['type_id']}
-                        <option value="{$item['id']}" selected="selected">{$item['type_name']}</option>
-                        {else}
-                        <option value="{$item['id']}" >{$item['type_name']}</option>
-                        {/if}                    
-                    {/loop}
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="col-xs-12 col-sm-3 col-md-2 control-label" style="margin-right: 15px;">二级栏目分类</label>
-                <input type="hidden" id="hiddeninfo" value="{$info['type2_id']}">
-                <select class="col-sm-8" name="type2_id" id="twofenlei">
-                    
-                </select>
-            </div>
-                
+
             </div>
 
         </div>

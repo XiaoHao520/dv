@@ -20,6 +20,7 @@ Page({
     refresh_top: false,
     scroll_top: true,
     index_class: false,
+    jingxuan: []
   },
   swiperChange: function (e) {
     this.setData({
@@ -263,15 +264,15 @@ Page({
                     city: res.data.cityname
                   })
                 }
-                 else {
+                else {
                   console.log(wx.getStorageSync('city_type'))
-                  if (wx.getStorageSync('city_type')!= 1){
-                  wx.setStorageSync('city', that.data.dwcity)
-                  that.setData({
-                    city: that.data.dwcity
-                  })
+                  if (wx.getStorageSync('city_type') != 1) {
+                    wx.setStorageSync('city', that.data.dwcity)
+                    that.setData({
+                      city: that.data.dwcity
+                    })
                   }
-                  else{
+                  else {
                     that.setData({
                       city: wx.getStorageSync('city')
                     })
@@ -288,33 +289,7 @@ Page({
                     console.log(res)
                   },
                 })
-                //---------------------------------- 传入最新城市----------------------------------
-                // if (res.data.result.ad_info.city != null) {
 
-                // }
-
-
-
-
-
-                // var city_type = wx.getStorageSync('city_type')
-                // if (city_type == 1) {
-                //   if (res.data.many_city == 1) {
-                //     that.setData({
-                //       city: wx.getStorageSync('city')
-                //     })
-                //   } else {
-                //     that.setData({
-                //       city: wx.getStorageSync('city')
-                //     })
-                //   }
-
-                // } else {
-                //   wx.setStorageSync('city', res.data.cityname)
-                //   that.setData({
-                //     city: res.data.cityname
-                //   })
-                // }
                 wx.setNavigationBarTitle({
                   title: res.data.pt_name
                 })
@@ -335,7 +310,7 @@ Page({
                 that.seller()
               },
             })
-             //wx.setStorageSync('city', res.data.result.address_component.city)
+            //wx.setStorageSync('city', res.data.result.address_component.city)
             //---------------------------------- 获取平台信息----------------------------------
 
             var gd_key = wx.getStorageSync('System').gd_key
@@ -429,6 +404,10 @@ Page({
       },
     })
 
+
+    that.getTz();
+
+
   },
   refresh: function (e) {
     var that = this
@@ -461,7 +440,7 @@ Page({
         console.log(res)
         var slide = []
         var advert = []
-        var ggslide=[]
+        var ggslide = []
         for (let i in res.data) {
           if (res.data[i].type == 1) {
             slide.push(res.data[i])
@@ -1004,11 +983,11 @@ Page({
     // })
   },
 
-   detail:function(e){
-      wx.navigateTo({
-        url: 'detail',
-      })
-   },
+  detail: function (e) {
+    wx.navigateTo({
+      url: 'detail',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面卸载
@@ -1050,4 +1029,39 @@ Page({
   onShareAppMessage: function () {
 
   },
+  getTz: function () {
+    var that = this;
+    var page = this.data.page;
+    if (page == null) {
+      page = 1;
+    }
+    app.util.request({
+      url: 'entry/wxapp/list2',
+      cacheTime: 0,
+      data: {
+        page: page
+      },
+      success: function (res) {
+        console.log("返回爆料")
+
+        var list = res.data;
+        for (var i = 0; i < list.length; i++) {
+         if(list[i].tz.img!='undefined'){
+           list[i].tz.img = list[i].tz.img.split(',')[0];
+         }
+
+        }
+
+
+
+        console.log(list);
+
+
+        that.setData({
+          tz_list: list
+        })
+      }
+    })
+
+  }
 })

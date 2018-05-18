@@ -1,9 +1,6 @@
 <!--pages/fabu/edit/edit.wxml-->
-<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
-  <view class="header" hidden='true'>
-    <view class="header_title">发布{{info}}信息</view>
-    <view class="header_right" bindtap='know'>发布须知</view>
-  </view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  
   <view class="content">
     <view class="content_miao">内容描述</view>
     <view class="miaoshu_box">
@@ -12,12 +9,10 @@
   </view>
 
    <view style="display: flex;">
-      <image src='../../image/pic.png' style='width: 39px;height: 38px;margin: 6px;'></image>
-
-      <image src='../../image/video.png' bindtap='videoRecord' style='width: 50px;height: 50px;margin-left: 15px;'></image>
+      <image src='../../image/video.png' bindtap='chooseVideo' style='width: 50px;height: 50px;margin-left: 15px;'></image>
    </view>
-
   <view class='upload'>
+    <block wx:if="{{video==null}}">
     <view class='content_add rel' wx:for="{{imgArray1}}" wx:key="*this">
       <view class='delete ab' bindtap='delete' data-inde="{{index}}">
         <image mode='aspectFill' class='ab' src='../../image/delete.png'></image>
@@ -27,9 +22,10 @@
     <view class='content_add' bindtap='imgArray1'>
       <image class="add_img" src="../../image/add.png"></image>
     </view>
-  </view>
-  <view class='label'>
-    <view wx:for="{{label}}" wx:key="*this" class='{{item.click_class}}' bindtap='label' data-inde='{{index}}' data-id='{{item.id}}'>{{item.label_name}}</view>
+    </block>
+    <block wx:elif="{{video!=null}}">
+        <video src='{{videoUrl}}' style='width:100%'></video>
+    </block>
   </view>
   <view class="banner">
     <view class="banner_list border flex-center">
@@ -47,8 +43,8 @@
   </view>
     
 
-     <view style='width: 80%;background-color: #58B4DD;margin: 0 auto;text-align: center;font-size: 13pt;height: 40px;line-height: 40px;color: white;margin-top: 20px;border-radius: 21px;'>
+     <button form-type='submit' style='width: 80%;background-color: #58B4DD;margin: 0 auto;text-align: center;font-size: 13pt;height: 40px;line-height: 40px;color: white;margin-top: 20px;border-radius: 21px;'>
         确认发布
-     </view>
+     </button>
 </form>
  

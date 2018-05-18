@@ -15,6 +15,8 @@ if($info['img']){
 				);
 		}
 		}
+
+		$video=$info['video'];
 if(checksubmit('submit')){
 		if($_GPC['img']){
 			$data['img']=implode(",",$_GPC['img']);
@@ -28,6 +30,7 @@ if(checksubmit('submit')){
 			$data['hot']=$_GPC['hot'];
 			$data['top']=$_GPC['top'];
 			$data['address']=$_GPC['address'];
+			$data['title']=$_GPC['title'];
 			$data['cityname']=$system['cityname'];
 			$data['type_id']=$_GPC['type_id'];
 			$data['type2_id']=$_GPC['type2_id'];

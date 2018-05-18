@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a953aec-d480-436e-81f5-90269944406f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/inc/func/core.php" afterPath="$PROJECT_DIR$/inc/func/core.php" />
+      <change beforePath="$PROJECT_DIR$/inc/web/informationinfo.inc.php" afterPath="$PROJECT_DIR$/inc/web/informationinfo.inc.php" />
+      <change beforePath="$PROJECT_DIR$/template/web/index.html" afterPath="$PROJECT_DIR$/template/web/index.html" />
+      <change beforePath="$PROJECT_DIR$/template/web/information.html" afterPath="$PROJECT_DIR$/template/web/information.html" />
+      <change beforePath="$PROJECT_DIR$/template/web/informationinfo.html" afterPath="$PROJECT_DIR$/template/web/informationinfo.html" />
+      <change beforePath="$PROJECT_DIR$/template/web/tzcheck.html" afterPath="$PROJECT_DIR$/template/web/tzcheck.html" />
+      <change beforePath="$PROJECT_DIR$/wxapp.php" afterPath="$PROJECT_DIR$/wxapp.php" />
+      <change beforePath="$PROJECT_DIR$/zh_tcwq_wxapp/project.config.json" afterPath="$PROJECT_DIR$/zh_tcwq_wxapp/project.config.json" />
+      <change beforePath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/fabu/edit/edit.js" afterPath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/fabu/edit/edit.js" />
+      <change beforePath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/fabu/edit/edit.wxml" afterPath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/fabu/edit/edit.wxml" />
+      <change beforePath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/index/index.js" afterPath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/index/index.js" />
+      <change beforePath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/index/index.wxml" afterPath="$PROJECT_DIR$/zh_tcwq_wxapp/zh_tcwq/pages/index/index.wxml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +28,7 @@
       <file leaf-file-name="wxpay.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wxpay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
+            <state relative-caret-position="739">
               <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
               <folding />
             </state>
@@ -27,51 +38,166 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/public/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4104">
+            <state relative-caret-position="4752">
               <caret line="216" column="10" lean-forward="false" selection-start-line="216" selection-start-column="10" selection-end-line="216" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/func/core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="39" column="16" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="39" selection-end-column="16" />
+            <state relative-caret-position="418">
+              <caret line="127" column="3" lean-forward="false" selection-start-line="127" selection-start-column="1" selection-end-line="137" selection-end-column="11" />
               <folding>
-                <marker date="1526629902194" expanded="true" signature="523:537" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="997:1011" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="1500:1514" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="2287:2301" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="3221:3235" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="3624:3638" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="4096:4110" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="5797:5811" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="6597:6611" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="7068:7082" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="7494:7508" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="8171:8185" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="9451:9465" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="9848:9862" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="10413:10427" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="10816:10830" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="11395:11409" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="11889:11903" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="12296:12310" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="12761:12775" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="13264:13278" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="13969:13983" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="14465:14490" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="15179:15204" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="15641:15666" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="16341:16366" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="16900:16925" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="17332:17357" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="17891:17916" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="18348:18373" ph="..." />
-                <marker date="1526629902194" expanded="true" signature="21772:21838" ph="SELECT * FRO... ${tablename('wpdc_store')}" />
+                <marker date="1526659436776" expanded="true" signature="523:537" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="997:1011" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="2287:2301" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="3150:3164" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="3553:3567" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="4024:4038" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="5729:5743" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="6531:6545" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="7002:7016" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="7430:7444" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="8109:8123" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="9389:9403" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="9786:9800" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="10351:10365" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="10754:10768" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="11333:11347" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="11827:11841" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="12234:12248" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="12699:12713" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="13202:13216" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="13907:13921" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="14403:14428" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="15117:15142" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="15579:15604" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="16279:16304" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="16838:16863" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="17270:17295" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="17829:17854" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="18286:18311" ph="..." />
+                <marker date="1526659436776" expanded="true" signature="21710:21776" ph="SELECT * FRO... ${tablename('wpdc_store')}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="155" column="26" lean-forward="true" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tzcheck.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/web/tzcheck.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1716">
+              <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wxapp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxapp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="428" column="75" lean-forward="true" selection-start-line="428" selection-start-column="75" selection-end-line="428" selection-end-column="75" />
+              <folding>
+                <marker date="1526661285003" expanded="true" signature="2698:2770" ph="select * fro... ${tablename('zhtc_ad')}" />
+                <marker date="1526661285003" expanded="true" signature="9304:9499" ph="select a.*,b... ${tablename(&quot;zhtc_like&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="9779:10061" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="10592:10798" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="11198:11632" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="11713:11893" ph="select a.*,b... ${tablename(&quot;zhtc_like&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="11979:12170" ph="select a.*,b... ${tablename(&quot;zhtc_comments&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="12256:12436" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="14398:14655" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="14813:14945" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="17232:17489" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="17732:17864" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="20981:21113" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="23735:23817" ph="select sum(v... ${tablename(&quot;zhtc_information&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="33599:33879" ph="select a.*,b... ${tablename(&quot;zhtc_store&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="34074:34358" ph="select a.*,b... ${tablename(&quot;zhtc_store&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="34720:34905" ph="select a.*,b... ${tablename(&quot;zhtc_comments&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="36601:36671" ph="select * fro... ${tablename('zhtc_news')}" />
+                <marker date="1526661285003" expanded="true" signature="54165:54351" ph="select a.*,b... ${tablename(&quot;zhtc_zx_assess&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="55325:55704" ph="select a.*,b... ${tablename(&quot;zhtc_zx_zj&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="61375:61444" ph="select * fro... ${tablename('zhtc_car')}" />
+                <marker date="1526661285003" expanded="true" signature="61706:61838" ph="select a.*,b... ${tablename(&quot;zhtc_car_my_tag&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="62630:62762" ph="select a.*,b... ${tablename(&quot;zhtc_car_my_tag&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="63401:63568" ph="select a.*,b... ${tablename(&quot;zhtc_car&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="63649:63811" ph="select a.*,b... ${tablename(&quot;zhtc_car_my_tag&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="70301:70467" ph="select a.*,b... ${tablename(&quot;zhtc_spec_value&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="76733:76901" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="77295:77441" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="78596:78765" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="78983:79146" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="80569:80720" ph="select a.* ,... ${tablename(&quot;zhtc_fxuser&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="80930:81105" ph="select a.* ,... ${tablename(&quot;zhtc_earnings&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="85066:85240" ph="select a.* ,... ${tablename(&quot;zhtc_fxuser&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="85408:85582" ph="select a.* ,... ${tablename(&quot;zhtc_fxuser&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="86428:86527" ph="select sum(t... ${tablename(&quot;zhtc_commission_withdrawal&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="86624:86735" ph="select sum(t... ${tablename(&quot;zhtc_commission_withdrawal&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="86833:86917" ph="select sum(m... ${tablename(&quot;zhtc_earnings&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="90825:91010" ph="select a.* ,... ${tablename(&quot;zhtc_yellowstore&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="92237:92408" ph="select a.* ,... ${tablename(&quot;zhtc_yellowstore&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="92847:93003" ph="select a.* ,... ${tablename(&quot;zhtc_yellowstore&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="102035:102216" ph="select a.sto... ${tablename(&quot;zhtc_store&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="106491:106791" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="109092:109276" ph="select a.det... ${tablename(&quot;zhtc_comments&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="111564:111742" ph="select a.det... ${tablename(&quot;zhtc_comments&quot;)}" />
+                <marker date="1526661285003" expanded="true" signature="113209:113495" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="information.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/web/information.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="124" column="78" lean-forward="false" selection-start-line="124" selection-start-column="67" selection-end-line="124" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="informationinfo.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/web/informationinfo.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="informationinfo.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/web/informationinfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="129" column="26" lean-forward="true" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="information.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/web/information.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +209,16 @@
       <find>志汇</find>
       <find>智慧</find>
       <find>拼车管理</find>
+      <find>upload</find>
+      <find>是否置顶</find>
+      <find>爆料</find>
+      <find>帖子审核</find>
+      <find>帖子</find>
+      <find>list2</find>
     </findStrings>
+    <replaceStrings>
+      <replace>报料</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +227,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/template/public/header.html" />
+        <option value="$PROJECT_DIR$/inc/web/information.inc.php" />
+        <option value="$PROJECT_DIR$/template/web/information.html" />
+        <option value="$PROJECT_DIR$/inc/web/informationinfo.inc.php" />
+        <option value="$PROJECT_DIR$/template/web/tzcheck.html" />
         <option value="$PROJECT_DIR$/inc/func/core.php" />
+        <option value="$PROJECT_DIR$/template/web/index.html" />
+        <option value="$PROJECT_DIR$/wxapp.php" />
+        <option value="$PROJECT_DIR$/template/web/informationinfo.html" />
       </list>
     </option>
   </component>
@@ -109,7 +251,9 @@
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -125,6 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -133,11 +278,32 @@
               <item name="dv" type="b2602c69:ProjectViewProjectNode" />
               <item name="dv" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="dv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="inc" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="inc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,33 +337,35 @@
       <updated>1526263039891</updated>
       <workItem from="1526263045001" duration="2848000" />
       <workItem from="1526288553235" duration="4784000" />
+      <workItem from="1526646712062" duration="9599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7632000" />
+    <option name="totallyTimeSpent" value="17231000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-9" y="-9" width="2578" height="1420" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25519168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -214,7 +382,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wxpay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
+        <state relative-caret-position="1936">
           <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
           <folding />
         </state>
@@ -222,7 +390,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/public/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4104">
+        <state relative-caret-position="4752">
           <caret line="216" column="10" lean-forward="false" selection-start-line="216" selection-start-column="10" selection-end-line="216" selection-end-column="10" />
           <folding />
         </state>
@@ -230,41 +398,197 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/func/core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="858">
           <caret line="39" column="16" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="39" selection-end-column="16" />
           <folding>
-            <marker date="1526629902194" expanded="true" signature="523:537" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="997:1011" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="1500:1514" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="2287:2301" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="3221:3235" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="3624:3638" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="4096:4110" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="5797:5811" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="6597:6611" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="7068:7082" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="7494:7508" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="8171:8185" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="9451:9465" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="9848:9862" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="10413:10427" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="10816:10830" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="11395:11409" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="11889:11903" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="12296:12310" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="12761:12775" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="13264:13278" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="13969:13983" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="14465:14490" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="15179:15204" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="15641:15666" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="16341:16366" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="16900:16925" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="17332:17357" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="17891:17916" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="18348:18373" ph="..." />
-            <marker date="1526629902194" expanded="true" signature="21772:21838" ph="SELECT * FRO... ${tablename('wpdc_store')}" />
+            <marker date="1526659436776" expanded="true" signature="523:537" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="997:1011" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="2287:2301" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="3150:3164" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="3553:3567" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="4024:4038" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="5729:5743" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="6531:6545" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="7002:7016" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="7430:7444" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="8109:8123" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="9389:9403" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="9786:9800" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="10351:10365" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="10754:10768" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="11333:11347" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="11827:11841" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="12234:12248" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="12699:12713" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="13202:13216" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="13907:13921" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="14403:14428" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="15117:15142" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="15579:15604" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="16279:16304" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="16838:16863" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="17270:17295" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="17829:17854" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="18286:18311" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="21710:21776" ph="SELECT * FRO... ${tablename('wpdc_store')}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4752">
+          <caret line="216" column="10" lean-forward="false" selection-start-line="216" selection-start-column="10" selection-end-line="216" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/web/information.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="124" column="78" lean-forward="false" selection-start-line="124" selection-start-column="67" selection-end-line="124" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/web/information.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/web/informationinfo.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/web/tzcheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1716">
+          <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/func/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="127" column="3" lean-forward="false" selection-start-line="127" selection-start-column="1" selection-end-line="137" selection-end-column="11" />
+          <folding>
+            <marker date="1526659436776" expanded="true" signature="523:537" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="997:1011" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="2287:2301" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="3150:3164" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="3553:3567" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="4024:4038" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="5729:5743" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="6531:6545" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="7002:7016" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="7430:7444" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="8109:8123" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="9389:9403" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="9786:9800" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="10351:10365" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="10754:10768" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="11333:11347" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="11827:11841" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="12234:12248" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="12699:12713" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="13202:13216" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="13907:13921" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="14403:14428" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="15117:15142" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="15579:15604" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="16279:16304" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="16838:16863" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="17270:17295" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="17829:17854" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="18286:18311" ph="..." />
+            <marker date="1526659436776" expanded="true" signature="21710:21776" ph="SELECT * FRO... ${tablename('wpdc_store')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="155" column="26" lean-forward="true" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxpay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="428" column="75" lean-forward="true" selection-start-line="428" selection-start-column="75" selection-end-line="428" selection-end-column="75" />
+          <folding>
+            <marker date="1526661285003" expanded="true" signature="2698:2770" ph="select * fro... ${tablename('zhtc_ad')}" />
+            <marker date="1526661285003" expanded="true" signature="9304:9499" ph="select a.*,b... ${tablename(&quot;zhtc_like&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="9779:10061" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="10592:10798" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="11198:11632" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="11713:11893" ph="select a.*,b... ${tablename(&quot;zhtc_like&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="11979:12170" ph="select a.*,b... ${tablename(&quot;zhtc_comments&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="12256:12436" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="14398:14655" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="14813:14945" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="17232:17489" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="17732:17864" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="20981:21113" ph="select a.*,b... ${tablename(&quot;zhtc_mylabel&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="23735:23817" ph="select sum(v... ${tablename(&quot;zhtc_information&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="33599:33879" ph="select a.*,b... ${tablename(&quot;zhtc_store&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="34074:34358" ph="select a.*,b... ${tablename(&quot;zhtc_store&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="34720:34905" ph="select a.*,b... ${tablename(&quot;zhtc_comments&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="36601:36671" ph="select * fro... ${tablename('zhtc_news')}" />
+            <marker date="1526661285003" expanded="true" signature="54165:54351" ph="select a.*,b... ${tablename(&quot;zhtc_zx_assess&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="55325:55704" ph="select a.*,b... ${tablename(&quot;zhtc_zx_zj&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="61375:61444" ph="select * fro... ${tablename('zhtc_car')}" />
+            <marker date="1526661285003" expanded="true" signature="61706:61838" ph="select a.*,b... ${tablename(&quot;zhtc_car_my_tag&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="62630:62762" ph="select a.*,b... ${tablename(&quot;zhtc_car_my_tag&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="63401:63568" ph="select a.*,b... ${tablename(&quot;zhtc_car&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="63649:63811" ph="select a.*,b... ${tablename(&quot;zhtc_car_my_tag&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="70301:70467" ph="select a.*,b... ${tablename(&quot;zhtc_spec_value&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="76733:76901" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="77295:77441" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="78596:78765" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="78983:79146" ph="select a.*,b... ${tablename(&quot;zhtc_order&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="80569:80720" ph="select a.* ,... ${tablename(&quot;zhtc_fxuser&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="80930:81105" ph="select a.* ,... ${tablename(&quot;zhtc_earnings&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="85066:85240" ph="select a.* ,... ${tablename(&quot;zhtc_fxuser&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="85408:85582" ph="select a.* ,... ${tablename(&quot;zhtc_fxuser&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="86428:86527" ph="select sum(t... ${tablename(&quot;zhtc_commission_withdrawal&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="86624:86735" ph="select sum(t... ${tablename(&quot;zhtc_commission_withdrawal&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="86833:86917" ph="select sum(m... ${tablename(&quot;zhtc_earnings&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="90825:91010" ph="select a.* ,... ${tablename(&quot;zhtc_yellowstore&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="92237:92408" ph="select a.* ,... ${tablename(&quot;zhtc_yellowstore&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="92847:93003" ph="select a.* ,... ${tablename(&quot;zhtc_yellowstore&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="102035:102216" ph="select a.sto... ${tablename(&quot;zhtc_store&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="106491:106791" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="109092:109276" ph="select a.det... ${tablename(&quot;zhtc_comments&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="111564:111742" ph="select a.det... ${tablename(&quot;zhtc_comments&quot;)}" />
+            <marker date="1526661285003" expanded="true" signature="113209:113495" ph="select a.*,b... ${tablename(&quot;zhtc_information&quot;)}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/web/informationinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="129" column="26" lean-forward="true" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
