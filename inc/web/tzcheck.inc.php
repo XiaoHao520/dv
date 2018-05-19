@@ -7,7 +7,10 @@ if(checksubmit('submit')){
       $data['hb_sxf']=$_GPC['hb_sxf'];   
        $data['hb_img']=$_GPC['hb_img']; 
         $data['tz_num']=$_GPC['tz_num'];  
-        $data['ft_xuz']=$_GPC['ft_xuz']; 
+        $data['ft_xuz']=$_GPC['ft_xuz'];
+        $data['tz_pass']=$_GPC['tz_pass'];
+    $data['tz_tj']=$_GPC['tz_tj'];
+    $data['tz_jx']=$_GPC['tz_jx'];
          $data['hb_content']=$_GPC['hb_content'];    
     $data['uniacid']=$_W['uniacid'];    
     if($_GPC['id']==''){                

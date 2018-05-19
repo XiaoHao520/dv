@@ -22,26 +22,26 @@
 <view style='display:flex;justify-content:space-between;padding:12px 20px;background-color:white;border-bottom:solid #f0f0f0 1rpx;'>
   <view style='display:flex'>
     <image src='../image/jifen.png' style='width: 25px;height: 25px;'></image>
-    <text style='font-size:11pt'>积分：100</text>
+    <text style='font-size:11pt'>积分：{{userinfo.integral}}</text>
   </view>
   <view style='display:flex'>
     <image src='../image/feiyong.png' style='width: 25px;height: 25px;'></image>
-    <text style='font-size:11pt'>爆料费：100</text>
+    <text style='font-size:11pt'>爆料费：{{userinfo.money}}</text>
   </view>
 </view>
 
 <view class="list">
   <view class="list_content">
     <view class="list_fukuan flex-bet">
-      <view class="flex3 list_collet" bindtap='payment'>
+      <view class="flex3 list_collet">
         <image class="list_fukuanimg" src="../image/jifen.png"></image>
         <view class="">我的积分</view>
       </view>
-      <view class="flex3 list_collet" bindtap='payment_one'>
+      <view class="flex3 list_collet">
         <image class="list_fukuanimg" src="../image/feiyong.png"></image>
         <view class="">报料费</view>
       </view>
-      <view class="flex3 list_collet" bindtap='fabu'>
+      <view class="flex3 list_collet" bindtap='my_post'>
         <image class="list_fukuanimg2" src="../image/fasong.png" style='width:64rpx'></image>
         <view class="">我的发布</view>
       </view>
@@ -62,7 +62,6 @@
       <image class="list_right" src="../image/huise@2x.png"></image>
     </view>
   </view>
-
 </view>
 <!--我的收藏部分结束  -->
 
@@ -78,16 +77,7 @@
       <image class="list_right" src="../image/huise@2x.png"></image>
     </view>
   </view>
-  <view class="banner_list flex-bet" bindtap='help'>
-    <view class="list_all flex-center">
-      <image class="list_allimg" src="../image/help.png"></image>
-      <view class="list_alltext">帮助中心</view>
-    </view>
-    <view class="list_alllist flex-center">
-      <view class="banner_text"></view>
-      <image class="list_right" src="../image/huise@2x.png"></image>
-    </view>
-  </view>
+  
   <view class="banner_list flex-bet" bindtap='about'>
     <view class="list_all flex-center">
       <image class="list_allimg" src="../image/about.png"></image>

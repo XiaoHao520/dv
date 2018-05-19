@@ -133,6 +133,71 @@ Page({
   onLoad: function (options) {
     console.log('onLoad')
     var that = this;
+
+
+
+    wx.getUserInfo({
+      success: function (res) {
+        // app.util.request({
+        //   'url': 'entry/wxapp/Ad',
+        //   'cachetime': '0',
+        //   success: function (res) {
+        //     console.log(res)
+        //     var slide = []
+        //     var advert = []
+        //     var ggslide = []
+        //     for (let i in res.data) {
+        //       if (res.data[i].type == 1) {
+        //         slide.push(res.data[i])
+        //       }
+        //       if (res.data[i].type == 5) {
+        //         advert.push(res.data[i])
+        //       }
+        //       if (res.data[i].type == 7) {
+        //         ggslide.push(res.data[i])
+        //       }
+        //     }
+        //     that.setData({
+        //       slide: slide,
+        //       advert: advert,
+        //       ggslide: ggslide,
+        //     })
+        //   },
+        // })
+
+      }, fail: function (res) {
+        app.util.request({
+          'url': 'entry/wxapp/Ad',
+          'cachetime': '0',
+          success: function (res) {
+            console.log(res)
+            var slide = []
+            var advert = []
+            var ggslide = []
+            for (let i in res.data) {
+              if (res.data[i].type == 1) {
+                slide.push(res.data[i])
+              }
+              if (res.data[i].type == 5) {
+                advert.push(res.data[i])
+              }
+              if (res.data[i].type == 7) {
+                ggslide.push(res.data[i])
+              }
+            }
+            that.setData({
+              slide: slide,
+              advert: advert,
+              ggslide: ggslide,
+            })
+          },
+        })
+      }
+    })
+
+
+
+
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
@@ -175,8 +240,14 @@ Page({
       },
     })
 
-
+ 
     that.reload()
+  },
+  bindgetuserinfo: function (e) {
+      this.reload();
+      this.setData({
+        advert:[]
+      })
   },
   reload: function (e) {
     var that = this
@@ -188,9 +259,6 @@ Page({
         wx.setStorageSync("code", code)
         wx.getUserInfo({
           success: function (res) {
-
-            console.log("888888888888888888888888888888")
-            console.log(res)
             wx.setStorageSync("user_info", res.userInfo)
             var nickName = res.userInfo.nickName
             var avatarUrl = res.userInfo.avatarUrl
@@ -217,8 +285,7 @@ Page({
             })
           },
           fail: function (res) {
-            console.log("****************************************")
-            console.log(res);
+          
             wx.getSetting({
               success: (res) => {
                 var authSetting = res.authSetting
@@ -405,6 +472,33 @@ Page({
     })
 
 
+    app.util.request({
+      'url': 'entry/wxapp/Ad',
+      'cachetime': '0',
+      success: function (res) {
+        console.log(res)
+        var slide = []
+        var advert = []
+        var ggslide = []
+        for (let i in res.data) {
+          if (res.data[i].type == 1) {
+            slide.push(res.data[i])
+          }
+          if (res.data[i].type == 5) {
+            advert.push(res.data[i])
+          }
+          if (res.data[i].type == 7) {
+            ggslide.push(res.data[i])
+          }
+        }
+        that.setData({
+          slide: slide,
+
+          ggslide: ggslide,
+        })
+      },
+    })
+
     that.getTz();
 
 
@@ -432,33 +526,7 @@ Page({
       },
     })
     // -----------------------------------轮播图和公告--------------------------------
-    app.util.request({
-      'url': 'entry/wxapp/Ad',
-      'cachetime': '0',
-      data: { cityname: city },
-      success: function (res) {
-        console.log(res)
-        var slide = []
-        var advert = []
-        var ggslide = []
-        for (let i in res.data) {
-          if (res.data[i].type == 1) {
-            slide.push(res.data[i])
-          }
-          if (res.data[i].type == 5) {
-            advert.push(res.data[i])
-          }
-          if (res.data[i].type == 7) {
-            ggslide.push(res.data[i])
-          }
-        }
-        that.setData({
-          slide: slide,
-          advert: advert,
-          ggslide: ggslide,
-        })
-      },
-    })
+
     //---------------------------------- 首页公告----------------------------------
     app.util.request({
       'url': 'entry/wxapp/news',
@@ -921,7 +989,6 @@ Page({
   // ---------------------------------------查看详情
   see: function (e) {
     var that = this
-    var seller = that.data.seller
     var id = e.currentTarget.dataset.id
     wx: wx.navigateTo({
       url: "../infodetial/infodetial?id=" + id,
@@ -1003,12 +1070,9 @@ Page({
     var that = this
     this.setData({
       page: 1,
-      seller: [],
-      refresh_top: false,
+      tz_list: []
     })
-    that.reload()
-    that.refresh()
-    that.seller()
+    this.getTz();
     wx: wx.stopPullDownRefresh()
   },
 
@@ -1017,7 +1081,11 @@ Page({
    */
   onReachBottom: function () {
     if (this.data.refresh_top == false) {
-      this.seller()
+      var page = this.data.page;
+      page = page + 1;
+      this.setData({ page: page });
+      this.getTz();
+
     } else {
 
     }
@@ -1043,25 +1111,43 @@ Page({
       },
       success: function (res) {
         console.log("返回爆料")
-
+        console.log(res);
         var list = res.data;
         for (var i = 0; i < list.length; i++) {
-         if(list[i].tz.img!='undefined'){
-           list[i].tz.img = list[i].tz.img.split(',')[0];
-         }
+          if (list[i].tz.img != 'undefined') {
+            list[i].tz.img = list[i].tz.img.split(',')[0];
+          }
+          var timeStr = parseInt(list[i].tz.sh_time);
+          console.log(timeStr)
+          var date = new Date(timeStr * 1000);
+          let M = ((date.getMonth() + 1) > 10 ? (date.getMonth() + 1) : '0' + (date.getMonth() + 1))
+          let D = (date.getDate() > 10 ? date.getDate() : '0' + date.getDate())
+          let toDay = M + '-' + D
+          list[i].tz.sh_time = toDay;
 
+          var lat2 = list[i].tz.latitude;
+          var lng2 = list[i].tz.longitude;
+          var lat1 = Number(wx.getStorageSync('Location').latitude)
+          var lng1 = Number(wx.getStorageSync('Location').longitude)
+          var radLat1 = lat1 * Math.PI / 180.0;
+          var radLat2 = lat2 * Math.PI / 180.0;
+          var a = radLat1 - radLat2;
+          var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;
+          var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+          s = s * 6378.137;
+          s = Math.round(s * 10000) / 10000 / 1000;
+          var s = s.toFixed(2)
+          list[i].tz.distance = s
         }
 
-
-
-        console.log(list);
-
-
+        var origin_tz_list = that.data.tz_list;
+        if (origin_tz_list != null) {
+          list = origin_tz_list.concat(list)
+        }
         that.setData({
           tz_list: list
         })
       }
     })
-
   }
 })

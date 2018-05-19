@@ -26,7 +26,7 @@
   </view>
 
   <!-- 导航模块开始 -->
-  <swiper wx:if="{{nav.length>0}}" class='classify' style='height:{{height}}rpx' autoplay="true" interval="4000" duration="1000" circular="true">
+  <swiper hidden='true' wx:if="{{nav.length>0}}" class='classify' style='height:{{height}}rpx' autoplay="true" interval="4000" duration="1000" circular="true">
     <block wx:for="{{nav}}" wx:key="{{item.value}}">
       <swiper-item>
         <block wx:for="{{item}}" wx:key="{{item.value}}">
@@ -59,7 +59,7 @@
 
 
   <!--——————————————————广告轮播图——————————————————  -->
-  <view class="body" wx:if="{{ggslide.length!=0}}">
+  <view class="body" wx:if="{{ggslide.length!=0}}" hidden='true'>
     <view class='banner' style='height:180rpx;'>
       <view class="swiper-container">
         <swiper autoplay="auto" circular='true' interval="5000" indicator-dots="true" indicator-color="#fff" indicator-active-color="#ED414A" duration="500" bindchange="swiperChange" class="swiper" style='height:180rpx;'>
@@ -81,64 +81,61 @@
   <block wx:if="{{tz.tz.top==1}}">
   <view style='background-color: white;border-bottom: solid #B6B6B6 0.5px;wxcs_style_border-bottom: solid #B6B6B6 1rpx;'>
     <view class='jingxuan'>
-      <view class='title'>
+      <view class='title' bindtap='see' data-id='{{tz.tz.id}}'>
             {{tz.tz.title}}
       </view>
-      <view class='jingxuan content-text'>
+      <view class='jingxuan content-text' bindtap='see' data-id='{{tz.tz.id}}'>
        {{tz.tz.details}}
       </view>
       <view>
-       <block wx:if="{{tz.tz.video!=''}}">
+       <block wx:if="{{tz.tz.video!=''&&tz.tz.video!='null'}}">
        <video src='{{url}}{{tz.tz.video}}' style='width:100%'></video>
         </block>
         <block wx:else>
-         <image src='../image/partner.jpg' style='width:100%'></image>
+         <image src='{{url}}{{tz.tz.img}}' style='width:100%' bindtap='see' data-id='{{tz.tz.id}}'></image>
         </block>
       </view>
 
-      <view style='display: flex;color: #A0A0A0;font-size: 11pt;position:relative'>
+      <view style='display: flex;color: #A0A0A0;font-size: 11pt;position:relative'  bindtap='see' data-id='{{tz.tz.id}}'>
         <view style='display:flex'>
           <image src='../image/time.png' style='width: 25px;height: 25px;display: inline-block;vertical-align: middle;'></image>
-          <text style='margin-left:3px'>02-28</text>
+          <text style='margin-left:3px'>{{tz.tz.sh_time}}</text>
         </view>
         <view style='display:flex;margin-left:10px'>
-          <image src='../image/new_comment.png' style='width: 24px;height: 24px;display: inline-block;vertical-align: middle;'></image>
-          <text style='margin-left:3px'>0</text>
+        <image src='../image/eyes.png' style='width: 25px;height: 25px;display: inline-block;vertical-align: midlle;align-self: center;'></image>
+        <text style='margin-left:3px'>{{tz.tz.views}}</text>
         </view>
         <view style='display: flex;margin-left: 10px;position: absolute;right: 10px;color: #ED434B;'>
           <image src='../image/address3.png' style='width: 24px;height: 24px;display: inline-block;vertical-align: middle;'></image>
-          <text style='margin-left:3px'>100KM</text>
+          <text style='margin-left:3px'>{{tz.tz.distance}}KM</text>
         </view>
       </view>
     </view>
   </view>
-
-
  </block>
 <block wx:else>
-
   <!--精选新闻结束  -->
   <view class='newest'>
     <view style='display:flex'>
-      <view style='width: 50%;font-weight: 600;'>
+      <view style='width: 50%;font-weight: 500;'  bindtap='see' data-id='{{tz.tz.id}}'>
        {{tz.tz.title}}
       </view>
-      <view style='width:50%'>
+      <view style='width:50%' bindtap='see' data-id='{{tz.tz.id}}'>
         <image src='{{url}}{{tz.tz.img}}' style='height: 145px;width: 100%;'></image>
       </view>
     </view>
-    <view style='display: flex;color: #A0A0A0;font-size: 11pt;position:relative'>
+    <view style='display: flex;color: #A0A0A0;font-size: 11pt;position:relative'  bindtap='see' data-id='{{tz.tz.id}}'>
       <view style='display:flex'>
         <image src='../image/time.png' style='width: 25px;height: 25px;display: inline-block;vertical-align: midlle;'></image>
-        <text style='margin-left:3px'>02-28</text>
+        <text style='margin-left:3px'>{{tz.tz.sh_time}}</text>
       </view>
       <view style='display:flex;margin-left:10px'>
-        <image src='../image/new_comment.png' style='width: 24px;height: 24px;display: inline-block;vertical-align: midlle;'></image>
-        <text style='margin-left:3px'>0</text>
+        <image src='../image/eyes.png' style='width: 25px;height: 25px;display: inline-block;vertical-align: midlle;align-self: center;'></image>
+        <text style='margin-left:3px'>{{tz.tz.views}}</text>
       </view>
       <view style='display: flex;margin-left: 10px;position: absolute;right: 10px;color: #ED434B;'>
         <image src='../image/address3.png' style='width: 24px;height: 24px;display: inline-block;vertical-align: midlle;'></image>
-        <text style='margin-left:3px'>100KM</text>
+        <text style='margin-left:3px'>{{tz.tz.distance}}KM</text>
       </view>
     </view>
   </view>
@@ -146,14 +143,7 @@
 </block>
 
 
-
-
-
-
-
-
-
-
+<!-- 
   <view class="content" wx:if="{{seller.length!=0}}" wx:for="{{seller}}" wx:key="{{item.value}}" hidden='true'>
 
     <view class="content_top">
@@ -179,9 +169,9 @@
         <view>拨打电话</view>
       </view>
     </view>
-    <!-- 上面部分结束   -->
+  
 
-    <!--文字部分  -->
+     
     <view class="content_wen gobyndmulit rel" bindtap='see' data-id='{{item.tz.id}}'>
       <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
         <button form-type='submit'></button>
@@ -191,7 +181,7 @@
       <view wx:for="{{item.label}}" wx:key="{{item.value}}">{{item.label_name}}</view>
     </view>
 
-    <!--图片部分  -->
+ 
     <view class="content_picture" wx:if="{{item.tz.img!=''}}">
       <view wx:for="{{item.tz.img1}}" wx:for-item="tpitem" wx:key="{{item.value}}">
         <image bindtap='previewImage' data-id='{{item.tz.id}}' data-inde='{{index}}' style='border-radius:10rpx;' mode='aspectFill' src="{{url}}{{tpitem}}"></image>
@@ -223,7 +213,7 @@
         查看详情>></view>
       <view class="kuang"></view>
     </view>
-  </view>
+  </view> -->
   <view class='loading rel' wx:if="{{refresh_top==true&&seller.length!=0}}">
     我也是有底线的
   </view>
@@ -245,8 +235,15 @@
           </swiper-item>
         </block>
       </swiper>
-      <image class='image1' bindtap='delete' mode='aspectFill' src='../image/delete.png'></image>
+     <button open-type='getUserInfo' bindgetuserinfo="bindgetuserinfo" style='background-color: white;margin-top: 10px;border-radius: 29px;color: #70CFFD;'>马上进入div现场</button>
     </view>
     <view class='back'></view>
+  
+  
+
   </view>
+
+
+ 
+
 </view>

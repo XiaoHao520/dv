@@ -61,7 +61,8 @@
     "zh_tcwq/pages/logs/jizhe/index",
     "zh_tcwq/pages/logs/jizhe/detail",
     "zh_tcwq/pages/logs/jifen/index",
-    "zh_tcwq/pages/logs/fabu/index"
+    "zh_tcwq/pages/logs/fabu/index",
+    "zh_tcwq/pages/mypost/mypost"
   ],
   "window": {
     "backgroundTextStyle": "black",

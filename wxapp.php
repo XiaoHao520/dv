@@ -91,6 +91,12 @@ class Zh_tcwqModuleWxapp extends WeModuleWxapp {
     public function doPagePosting() {
         global $_GPC, $_W;
         $system = pdo_get('zhtc_system', array('uniacid' => $_W['uniacid']));
+
+        $tz_tj=$system['tz_tj'];
+        $user=pdo_get('zhtc_user',array('id'=>$_GPC['user_id']));
+
+         $user_integral=$user['integral'];
+         $user_integral=$user_integral+$tz_tj;
         $data['details'] = $_GPC['details']; //帖子内容
         $data['img'] = $_GPC['img']; //帖子图片
         $data['user_id'] = $_GPC['user_id']; //用户id
@@ -103,13 +109,11 @@ class Zh_tcwqModuleWxapp extends WeModuleWxapp {
         $data['address'] = $_GPC['address']; //帖子地址
         $data['store_id'] = $_GPC['store_id'];
         $data['cityname'] = $_GPC['cityname'];
+        $data['city_code']=$_GPC['city_code'];
         $data['video']=$_GPC['video'];
-
-        if ($_GPC['type']) {
-            $data['top'] = 1;
-        } else {
-            $data['top'] = 2;
-        }
+        $data['latitude']=$_GPC['latitude'];
+        $data['longitude']=$_GPC['longitude'];
+        $data['top']=0;
         $data['time'] = time();
         $data['uniacid'] = $_W['uniacid'];
         if ($system['tz_audit'] == 2) {
@@ -148,6 +152,7 @@ class Zh_tcwqModuleWxapp extends WeModuleWxapp {
         $sz = json_decode(json_encode($a), true);
         // print_r($sz);die;
         if ($res) {
+             pdo_update('zhtc_user',array('integral'=>$user_integral),array('id'=>$_GPC['user_id']));
             for ($i = 0;$i < count($sz);$i++) {
                 $data2['label_id'] = $sz[$i]['label_id'];
                 $data2['information_id'] = $post_id;

@@ -41,12 +41,12 @@ class Core extends WeModuleSite
               $navemenu[1] = array(
                 'title' => '<a href="index.php?c=site&a=entry&op=display&do=information&m=zh_tcwq" class="panel-title wytitle" id="yframe-1"><icon style="color:#8d8d8d;" class="fa fa-comment-o"></icon>  爆料管理</a>',
                 'items' => array(
-                     0 => $this->createMainMenu('爆料列表 ', $do, 'information', ''),
+                     0 => $this->createMainMenu('报料列表 ', $do, 'information', ''),
                    /*  2 => $this->createMainMenu('添加爆料', $do, 'addinformation', ''),*/
                      3 => $this->createMainMenu('置顶设置', $do, 'top', ''),
                      // 3 => $this->createMainMenu('信息分类 ', $do, 'type', ''),
                      // 4 => $this->createMainMenu('二级信息分类 ', $do, 'type2', ''),
-                     4=> $this->createMainMenu('爆料设置', $do, 'tzcheck', ''),
+                     4=> $this->createMainMenu('报料设置', $do, 'tzcheck', ''),
                      5=> $this->createMainMenu('评论管理', $do, 'tzpinglun', '')
                 )
             );

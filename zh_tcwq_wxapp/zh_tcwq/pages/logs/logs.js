@@ -32,11 +32,19 @@ Page({
         timingFunc: 'easeIn'
       }
     })
+
+  
+
+
     var support = wx.getStorageSync('System').bq_name
     var bq_logo = wx.getStorageSync('System').bq_logo
     var user_info = wx.getStorageSync('user_info')
-    console.log("-----------------------------");
-    console.log(user_info)
+   var userinfo=wx.getStorageSync('users');
+  
+    that.setData({
+      userinfo:userinfo
+    })
+ 
     var store = wx.getStorageSync('store')
     var url = wx.getStorageSync('url')
     console.log(store)
@@ -60,20 +68,8 @@ Page({
     })
   },
   //我要入驻跳转页面
-  settled: function (e) {
-    wx: wx.navigateTo({
-      url: '../settled/settled',
-    })
-  },
-  yellow_page: function (e) {
-    wx: wx.navigateTo({
-      url: '../yellow_page/mine_yellow',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // 
+ 
+ 
   my_post: function (e) {
     wx: wx.navigateTo({
       url: '../mypost/mypost',
@@ -81,140 +77,8 @@ Page({
       fail: function (res) { },
       complete: function (res) { },
     })
-  },
-  content: function (e) {
-    wx: wx.navigateTo({
-      url: '../content/content',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  logs_store: function (e) {
-    var users_info = wx.getStorageSync('users')
-    var user_id = users_info.id
-    var store_info = wx.getStorageSync('store_info')
-    console.log(store_info)
-    if (store_info == null || store_info == '') {
-      wx: wx.navigateTo({
-        url: 'bbaa',
-        success: function (res) { },
-        fail: function (res) { },
-        complete: function (res) { },
-      })
-    } else {
-      wx: wx.navigateTo({
-        url: '../redbag/merchant?id=' + store_info.id,
-        success: function (res) { },
-        fail: function (res) { },
-        complete: function (res) { },
-      })
-    }
-  },
-  // --------------------------跳转订单---------------------------
-  order: function (e) {
-    wx: wx.navigateTo({
-      url: 'order',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // ---------------------待付款----------------
-  payment: function (e) {
-    wx: wx.navigateTo({
-      url: 'order?activeIndex=' + 0,
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // ---------------------代发货----------------
-  payment_one: function (e) {
-    wx: wx.navigateTo({
-      url: 'order?activeIndex=' + 1,
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // ---------------------待收货----------------
-  payment_two: function (e) {
-    wx: wx.navigateTo({
-      url: 'order?activeIndex=' + 2,
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // ---------------------已完成----------------
-  payment_three: function (e) {
-    wx: wx.navigateTo({
-      url: 'order?activeIndex=' + 3,
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // ---------------------售后----------------
-  payment_four: function (e) {
-    wx: wx.navigateTo({
-      url: 'order?activeIndex=' + 4,
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // ----------------------------------帮助中心----------------------------------
-  help: function (e) {
-    wx: wx.navigateTo({
-      url: '../store/help',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // --------------------跳转我的钱包-------------------
-  wallet: function (e) {
-    wx: wx.navigateTo({
-      url: 'income',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // -----------------------------跳转我发布的拼车--------------
-  mine_car: function (e) {
-    wx: wx.navigateTo({
-      url: 'mine_car',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  // ----------------------------收货地址---------------
-  address: function (e) {
-    var users_info = wx.getStorageSync('users')
-    var user_id = users_info.id
-    wx.chooseAddress({
-      success: function (res) {
-        console.log(res)
-        app.util.request({
-          'url': 'entry/wxapp/UpdAdd',
-          'cachetime': '0',
-          data: {
-            user_id: user_id,
-            user_name: res.userName,
-            user_tel: res.telNumber,
-            user_address: res.provinceName + res.cityName + res.countyName + res.detailInfo,
-          },
-          success: function (res) {
-            console.log(res)
-          },
-        })
-      }
-    })
-  },
+  } ,
+ 
   // ----------------------------------------------------跳转小程序------------------------------
   jump: function (e) {
     wx.navigateToMiniProgram({

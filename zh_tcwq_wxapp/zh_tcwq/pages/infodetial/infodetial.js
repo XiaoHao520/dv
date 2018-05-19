@@ -17,7 +17,12 @@ Page({
     hb_share: false,
     share_red: false
   },
+show:function(){
 
+  this.setData({
+    display:'show'
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,7 +40,7 @@ Page({
       }
     })
     wx.setNavigationBarColor({
-      frontColor: '#ffffff',
+      frontColor: 'black',
       backgroundColor: wx.getStorageSync('color'),
       animation: {
         duration: 0,
@@ -161,7 +166,7 @@ Page({
           var type2_name = res.data.tz.type2_name
         }
         wx.setNavigationBarTitle({
-          title: res.data.tz.type_name + ' ' + type2_name
+          title: '详情'
         })
         var time1 = that.ormatDate(res.data.tz.sh_time)
         res.data.tz.time2 = time1.slice(0, 16)
@@ -232,6 +237,29 @@ Page({
         res.data.tz.dis1 = 'block'
         res.data.tz.trans_1 = 2
         res.data.tz.trans_2 = 1
+
+
+        var timeStr = parseInt(res.data.tz.sh_time);
+        console.log(timeStr)
+        var date = new Date(timeStr * 1000);
+        let M = ((date.getMonth() + 1) > 10 ? (date.getMonth() + 1) : '0' + (date.getMonth() + 1))
+        let D = (date.getDate() > 10 ? date.getDate() : '0' + date.getDate())
+        let toDay = M + '-' + D
+        res.data.tz.sh_time = toDay;
+
+        var lat2 = res.data.tz.latitude;
+        var lng2 = res.data.tz.longitude;
+        var lat1 = Number(wx.getStorageSync('Location').latitude)
+        var lng1 = Number(wx.getStorageSync('Location').longitude)
+        var radLat1 = lat1 * Math.PI / 180.0;
+        var radLat2 = lat2 * Math.PI / 180.0;
+        var a = radLat1 - radLat2;
+        var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;
+        var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+        s = s * 6378.137;
+        s = Math.round(s * 10000) / 10000 / 1000;
+        var s = s.toFixed(2)
+        res.data.tz.distance = s
         that.setData({
           post: res.data.tz,
           dianzan: res.data.dz,
@@ -539,6 +567,9 @@ Page({
   },
   // ---------------------------------------点击评论弹出评论框
   comment: function (e) {
+     this.setData({
+       display:'hide'
+     })
     var that = this
     var user_id = wx.getStorageSync('users').id
     app.util.request({
@@ -549,7 +580,7 @@ Page({
         console.log(res)
         if (res.data.state == 1) {
           that.setData({
-            comment: true
+            comment: true,
           })
         } else {
           wx: wx.showModal({
@@ -722,6 +753,10 @@ Page({
   // ————————————————点击回复，弹出回复框——————————————————————
   reply1: function (e) {
     var that = this
+
+    this.setData({
+           display:'hide'
+    })
     // 要回复的id
     var id = e.currentTarget.dataset.reflex_id
     var reflex_name = e.currentTarget.dataset.name
@@ -743,6 +778,9 @@ Page({
     }
   },
   formid_one: function (e) {
+    // this.setData({
+    //   display:'show'
+    // })
     app.util.request({
       'url': 'entry/wxapp/SaveFormid',
       'cachetime': '0',
@@ -788,9 +826,14 @@ Page({
             wx.showToast({
               title: '回复成功',
             })
+
+            
+
             setTimeout(function () {
               that.reload()
             }, 1000)
+
+             that.show()
           }
         },
       })

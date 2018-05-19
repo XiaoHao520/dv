@@ -107,20 +107,17 @@ Page({
           'cachetime': '0',
           data: { op: op },
           success: res => {
-
             console.log(res);
-
             that.setData({
               address: res.data.result.address,
-              city: res.data.result.address_component.city
+              city: res.data.result.address_component.city,
+              city_code: res.data.result.ad_info.city_code
             })
           }
         })
       }
     })
-
   },
-
   // ----------------------------------选择具体地址和经纬度----------------------------------
   add: function (e) {
     var that = this
@@ -310,19 +307,33 @@ Page({
     var uniacid = wx.getStorageSync('uniacid')
     var user_id = wx.getStorageSync('users').id
     var city = that.data.city
-    if(imgArray1!=null){
+    var city_code = that.data.city_code;
+    var location = wx.getStorageSync('Location');
+    var latitude = 0;
+    var longitude = 0;
+
+    if (location != null) {
+
+      latitude = location.latitude;
+      longitude = location.longitude;
+    }
+
+
+    console.log(location);
+
+    if (imgArray1 != null) {
       if (imgArray1.length == 0) {
         var img = ''
       } else {
         var img = imgArray1.join(",")
       }
-    }else{
-     var img='';
+    } else {
+      var img = '';
     }
-    if(video==null){
-      video='';
+    if (video == null) {
+      video = '';
     }
-  
+
     app.util.request({
       'url': 'entry/wxapp/Posting',
       'cachetime': '0',
@@ -335,13 +346,19 @@ Page({
         address: address,
         video: video,
         uniacid: uniacid,
-        cityname: city
+        cityname: city,
+        city_code: city_code,
+        longitude: longitude,
+        latitude: latitude
       },
       success: function (res) {
         // -----------------------------------发布成功跳转到首页-----------------------------------------
         if (res.data != 0) {
           wx.showToast({
             title: '已发布',
+          })
+          wx.reLaunch({
+            url: '../../index/index',
           })
         }
       }
@@ -389,6 +406,7 @@ Page({
    */
   onPullDownRefresh: function () {
 
+  
   },
 
   /**

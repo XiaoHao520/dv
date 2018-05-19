@@ -12,9 +12,7 @@
 <view class='infobody'>
   <view style='height:20rpx;background:#fff'></view>
   <view class='header rel'>
-    <view class='post ab ud' bindtap='post'>
-      我要发布
-    </view>
+   
     <view class='user_img fl rel'>
       <image wx:if="{{post.user_img!=null}}" class='ab ud' src='{{post.user_img}}'></image>
       <image wx:elif="{{post.user_img2!=''}}" class='ab ud' src='{{url}}{{post.user_img2}}'></image>
@@ -23,28 +21,37 @@
     <view class='user_info fl rel'>
       <view class='info_name'>{{post.user_name}}</view>
       <view class='info_label'>
-        <view class='fl color2 color' wx:if="{{post.top==1}}">置顶</view>
-        <view class='fl color1 color' wx:if="{{post.type_name!=null}}">{{post.type_name}}</view>
-        <view class='fl color1 color' wx:if="{{post.type2_name!=null}}">{{post.type2_name}}</view>
+        <view class='fl color2 color' wx:if="{{post.top==1}}">精选</view>
+        <view class='fl color1 color'>{{post.cityname}}</view>
+     
         <!-- <view class='fr'>{{post.time2}}发布</view> -->
       </view>
       <view class='info_name1'>
         <image mode='widthFix' src='../image/xiangqingdizhi@3x.png'></image>
-        <text>{{post.address}}</text>
+        <text>{{post.address}}</text>  <text style='margin-left: 20px;color: #DD2C31;'>{{post.distance}}KM</text>
       </view>
     </view>
   </view>
   <!-- -------------------------------------------------------- -->
   <view class='infodetial'>
+
+     <view style='color: black;font-weight: bold;border-bottom: solid #f0f0f0 0.5px;wxcs_style_border-bottom: solid #f0f0f0 1rpx;padding: 10px;'>{{post.title}}</view>
     <view class='ionfointro'>{{post.details}}</view>
     <view class='label' wx:if="{{label.length!=0}}">
       <view wx:for="{{label}}">{{item.label_name}}</view>
     </view>
-    <view class='imgnum' wx:if="{{post.img!=''}}">
+    <view wx:if="{{post.video!=''&&post.video!='null'}}" class='imgnum'>
+      <video src='{{url}}{{post.video}}' style='width:100%;'  class='{{display}}'></video>
+    </view>
+
+    <view class='imgnum' wx:if="{{post.img!=''&&post.img!='undefined'}}">
       <image mode='widthFix' wx:for="{{post.img}}" src="{{url}}{{item}}" bindtap='previewImage' data-inde='{{index}}'></image>
     </view>
+
     <form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
       <view class='viewnum rel'>
+          <image src='../image/time.png' style='width: 19px;height: 19px;display: inline-block;vertical-align: midlle;'></image>
+        <text style='margin-left:3px'>{{post.sh_time}}</text>
         <image src='../image/view.png' class='views'></image>
         <view class='viewsnum'>{{post.views}}</view>人浏览
         <image src='../image/zan.png' class='zan' wx:if="{{thumbs_ups==null}}" bindtap='thumbs_up'></image>
@@ -56,7 +63,7 @@
       </view>
     </form>
 
-    <view class="portrait flex2">
+    <view class="portrait flex2" hidden='true'>
       <view class="portrait_one flex3">
         <view>{{post.givelike}}</view>
         <view>赞</view>
@@ -65,48 +72,11 @@
         <image class="portrait_img" src="{{item.user_img}}"></image>
       </view>
     </view>
-
   </view>
 </view>
 <!-- 信息详情结束 -->
 
-<!-- ————————————联系电话版块开始—————————————— -->
-<view class="portrait_tel">
-  <view class="flex-bet portrait_teltop">
-    <view class="portrait_telnum">发布时间：{{post.time2}}</view>
-  </view>
-  <view class="flex-bet portrait_teltop">
-    <view class="portrait_telnum">联系电话：{{post.user_tel}}</view>
-    <image class="portrait_telimg" bindtap='phone' src="../image/tel.png"></image>
-  </view>
-  <view class="portrait_telbot">联系我时，请说是在{{system_name}}上看到的信息喔...</view>
-</view>
-<!-- ————————————联系电话版块结束—————————————— -->
-<view class="shengxia" wx:if="{{post.hb_money>0}}">
-  <view class="content_ling" wx:if="{{post.hb_keyword!=''}}">口令：
-    <text class="section_num">{{post.hb_keyword}}</text>
-  </view>
-  <view class="content_count">
-    已抢
-    <text class="section_num">{{hongbao_len}}</text> /{{post.hb_num}}份，共计
-    <text class="section_num" wx:if="{{hongbao_len<post.hb_num}}">{{price}}</text>
-    <text class="section_num" wx:if="{{hongbao_len==post.hb_num}}">{{post.hb_money}}</text> /{{post.hb_money}}元
-  </view>
-</view>
-<!--—————————————用户列表部分开始—————————————  -->
-<view class="user" wx:for="{{hongbao}}">
-  <view class="user_list flex-bet">
-    <view class="user_text flex-center">
-      <image class="user_img1" src="{{item.img}}"></image>
-      <view class="user_name gobyndsingle">{{item.name}}</view>
-    </view>
-    <view class="flex-center">
-      <image class="user_moimg" src="../image/cost.png"></image>
-      <view class="section_num">{{item.money}}元</view>
-    </view>
-  </view>
-</view>
-<!--—————————————用户列表部分结束—————————————  -->
+  
 <!-- 评论模块开始 -->
 <view class="portrait_ctop flex-bet">
   <view class="flex-center">
@@ -158,12 +128,12 @@
     <view class="reply_bot">
       <view class="reply_liu">
         <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
-          <button form-type='submit'>取消</button>
+          <button form-type='submit' bindtap='show'>取消</button>
         </form>
       </view>
       <view class="reply_liu reply_hui">
         <form class='plate_form' bindsubmit="formid_two" report-submit="true" bindreset="formReset">
-          <button form-type='submit'>发表</button>
+          <button form-type='submit' bindtap='show'>发表</button>
         </form>
       </view>
     </view>
@@ -179,7 +149,7 @@
     <view class="reply_bot">
       <view class="reply_liu" bindtap="reply2">
         <form class='plate_form' bindsubmit="formid_one" report-submit="true" bindreset="formReset">
-          <button form-type='submit'>取消</button>
+          <button form-type='submit' bindtap='show'>取消</button>
         </form>
       </view>
       <view class="reply_liu reply_hui" bindtap="reply3">回复</view>

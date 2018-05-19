@@ -64,16 +64,17 @@
 
                         <th class="store_td1 col-md-1" >id</th>
 
-                        <th class="store_td1 col-md-2">用户头像</th>
+                        <th class="store_td1 col-md-1">用户头像</th>
 
                         <th class="col-md-1">用户昵称</th>
 
                         <th class="col-md-1">用户openid</th>
 
                         <th class="col-md-2">注册时间</th>
-                          <th class="col-md-1">余额</th>
-                         <th class="col-md-2">状态</th>
-                        <th class="col-md-2">操作</th>
+                          <th class="col-md-1">报料费</th>
+                        <th class="col-md-1">积分</th>
+                         <th class="col-md-1">状态</th>
+                        <th class="col-md-4">操作</th>
 
                     </tr>
 
@@ -101,6 +102,7 @@
 
                         <td>{php echo date("Y-m-d H:i:s",$row['time']);}</td> 
                         <td>{$row['money']}</td>
+                        <td>{$row['integral']}</td>
                         <td>{if $row['state']==1}<span class="label storeblue">正常</span>{else}<span class="label storegrey">已拉黑{/if}</td>
 
                         <td>
@@ -110,6 +112,12 @@
                         {if $row['state']==2}
                             <button type="button" class="btn storeblue btn-xs" data-toggle="modal" data-target="#myModal3{$row['id']}">取消拉黑</button>
                             {/if}
+                            <a href="{php echo $this->createWebUrl('userinfo',array('id'=>$row['id']));}" class="storespan btn btn-xs">
+                                <span class="fa fa-pencil"></span>
+                                <span class="bianji">编辑
+                                  <span class="arrowdown"></span>
+                              </span>
+                            </a>
                             <a href="javascript:void(0);" class="storespan btn btn-xs" data-toggle="modal" data-target="#myModal{$row['id']}">
                                 <span class="fa fa-trash-o"></span>
                                 <span class="bianji">删除

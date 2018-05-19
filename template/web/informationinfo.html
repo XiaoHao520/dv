@@ -105,7 +105,7 @@
                     <label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
                     <div class="col-sm-9">
 
-                        {if $info['video']!=''}
+                        {if $info['video']!=''&&$info['video']!='null'}
                         <div >
                             <video src="http://{php echo $_SERVER['HTTP_HOST']}/attachment/{$info['video']}" controls="controls"></video>
                         </div >
@@ -116,19 +116,6 @@
 
                 
 
-              <div class="form-group" hidden>
-                    <label for="lastname" class="col-sm-2 control-label">是否精选</label>
-                    <div class="col-sm-10">
-                         <label class="radio-inline">
-                            <input type="radio" id="emailwy1" name="hot" value="1" {if $info['hot']==1 || empty($info['hot'])}checked{/if} />
-                            <label for="emailwy1">是</label>
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" id="emailwy2" name="hot" value="0" {if $info['hot']==2}checked{/if} />
-                            <label for="emailwy2">否</label>
-                        </label>
-                    </div>
-                </div>
             <div class="form-group">
                     <label for="lastname" class="col-sm-2 control-label">是否精选</label>
                     <div class="col-sm-10">
@@ -137,7 +124,7 @@
                             <label for="emailwy3">是</label>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" id="emailwy4" name="top" value="0" {if $info['top']==2}checked{/if} />
+                            <input type="radio" id="emailwy4" name="top" value="0" {if $info['top']==0}checked{/if} />
                             <label for="emailwy4">否</label>
                         </label>
                     </div>

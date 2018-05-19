@@ -16,7 +16,11 @@ if($info['img']){
 		}
 		}
 
-		$video=$info['video'];
+
+		if($info['video']!=''&&$info['video']!='null'){
+            $video=$info['video'];
+        }
+
 if(checksubmit('submit')){
 		if($_GPC['img']){
 			$data['img']=implode(",",$_GPC['img']);

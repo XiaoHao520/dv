@@ -30,7 +30,8 @@
 <ul class="nav nav-tabs">    
     <span class="ygxian"></span>
     <div class="ygdangq">当前位置:</div>
-    <li class="active"><a href="javascript:void(0);">报料设置</a></li>
+    <li class="active"><a href="javascript:void(0);">
+        报料设置</a></li>
 </ul>
 <div class="main">
     <form action="" method="post" class="form-horizontal form" enctype="multipart/form-data">
@@ -62,6 +63,34 @@
                        <div class="help-block">*数据为空或不填，则为真实报料数据</div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">报料积分（<span style="color: red">提交报料</span>）</label>
+                    <div class="col-sm-9">
+                        <input type="number" name="tz_tj"  class="form-control" value="{$item['tz_tj']}" />
+                        <div class="help-block">提交报料，报料人获得的积分</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">报料积分（<span style="color:red;">审核通过</span>）</label>
+                    <div class="col-sm-9">
+                        <input type="number" name="tz_pass"  class="form-control" value="{$item['tz_pass']}" />
+                        <div class="help-block">审核通过的报料，报料人获得的积分</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">报料积分（<span style="color: red">精选报料</span>）</label>
+                    <div class="col-sm-9">
+                        <input type="number" name="tz_jx"  class="form-control" value="{$item['tz_jx']}" />
+                        <div class="help-block">报料精选，报料人获得的积分</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
                 <div class="form-group" hidden>
                     <label class="col-xs-12 col-sm-3 col-md-2 control-label">红包手续费(%)</label>
                     <div class="col-sm-9">

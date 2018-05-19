@@ -25,7 +25,7 @@ Page({
     sliderOffset: 0,
     sliderLeft: 35,
 
-    tabs: ["收藏的帖子", "收藏的商家"],
+    tabs: ["收藏的帖子"],
     activeIndexe: 0,
     sliderOffsete: 0,
     sliderLefte: 0,
@@ -291,7 +291,7 @@ Page({
    */
   onShow: function () {
     wx.setNavigationBarColor({
-      frontColor: '#ffffff',
+      frontColor: 'black',
       backgroundColor: wx.getStorageSync('color'),
       animation: {
         duration: 0,
